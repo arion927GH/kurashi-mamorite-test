@@ -437,6 +437,28 @@ h3 {
   line-height: 2;
 }
 
+.contact-info {
+  margin: 0 auto 26px;
+  padding: 22px 24px;
+  max-width: 720px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.08);
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact-info .contact-address {
+  margin: 8px 0;
+  color: white;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
 .cta-section .button {
   background: white;
   color: var(--accent-dark);
