@@ -13,7 +13,8 @@
   --line: #d9d9d9;
   --line-strong: #1f1f1f;
   --soft: #f5f5f5;
-  --container: 1160px;
+  --container: 1080px;
+  --measure: 760px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
@@ -26,6 +27,10 @@
   --space-16: 64px;
   --space-20: 80px;
   --space-24: 96px;
+  --space-section-lg: clamp(120px, 11vw, 180px);
+  --space-section-md: clamp(64px, 9vw, 96px);
+  --space-block: clamp(40px, 5vw, 72px);
+  --space-inner: clamp(24px, 3vw, 40px);
 }
 
 * { box-sizing: border-box; }
@@ -133,7 +138,7 @@ a {
 }
 
 .section {
-  padding-block: var(--space-20);
+  padding-block: var(--space-section-lg);
   background: var(--surface);
 }
 
@@ -142,14 +147,14 @@ a {
 }
 
 .hero {
-  padding-top: var(--space-20);
-  padding-bottom: var(--space-24);
+  padding-top: clamp(136px, 14vw, 200px);
+  padding-bottom: clamp(120px, 12vw, 170px);
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
-  gap: var(--space-12);
+  gap: clamp(48px, 6vw, 84px);
   align-items: stretch;
 }
 
@@ -158,12 +163,12 @@ a {
   flex-direction: column;
   justify-content: center;
   max-width: 700px;
-  padding: var(--space-8) 0;
+  padding: var(--space-block) 0;
 }
 
 .hero-label,
 .section-eyebrow {
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-inner);
   color: #111111;
   font-size: 12px;
   font-weight: 700;
@@ -171,10 +176,10 @@ a {
 }
 
 h1 {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-block);
   font-size: clamp(42px, 5.2vw, 68px);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.28;
   letter-spacing: 0.015em;
 }
 
@@ -207,33 +212,34 @@ h3 {
 }
 
 .lead {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-block);
   font-size: 17px;
+  max-width: var(--measure);
 }
 
 .hero-actions,
 .cta-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3);
+  gap: var(--space-inner);
 }
 
 .hero-visual {
   border-left: 1px solid var(--line);
-  padding: var(--space-8) 0 var(--space-6) var(--space-8);
+  padding: var(--space-block) 0 var(--space-inner) var(--space-block);
   display: grid;
   align-content: center;
-  gap: var(--space-5);
+  gap: var(--space-inner);
 }
 
 .photo-slot {
-  min-height: 270px;
+  min-height: clamp(220px, 32vw, 320px);
   border: 1px solid var(--line-strong);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: var(--space-6);
+  padding: var(--space-inner);
   background:
     linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%),
     repeating-linear-gradient(45deg, transparent 0, transparent 14px, #f1f1f1 14px, #f1f1f1 15px);
@@ -252,6 +258,7 @@ h3 {
 
 .hero-note {
   font-size: 13px;
+  margin-top: var(--space-2);
 }
 
 .area-note {
@@ -263,16 +270,16 @@ h3 {
 }
 
 .section-head {
-  max-width: 920px;
-  margin-bottom: var(--space-10);
+  max-width: var(--measure);
+  margin-bottom: var(--space-block);
 }
 
 .section-head-tight {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-block);
 }
 
 #worries .section-head {
-  margin-bottom: var(--space-12);
+  margin-bottom: clamp(52px, 7vw, 90px);
 }
 
 .worry-list {
@@ -289,7 +296,7 @@ h3 {
 }
 
 .worry-list li {
-  padding: 18px 0;
+  padding: 24px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -298,12 +305,12 @@ h3 {
 }
 
 .inline-cta {
-  margin-top: var(--space-10);
+  margin-top: var(--space-block);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  padding-top: var(--space-8);
+  padding-top: var(--space-block);
   border-top: 1px solid var(--line);
 }
 
@@ -314,14 +321,14 @@ h3 {
 
 .service-list {
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-inner);
 }
 
 .service-item {
   display: grid;
   grid-template-columns: 90px minmax(0, 1fr) 190px;
-  gap: var(--space-6);
-  padding: var(--space-8) 0;
+  gap: var(--space-inner);
+  padding: clamp(44px, 5vw, 72px) 0;
   border-top: 1px solid var(--line);
   align-items: center;
 }
@@ -357,7 +364,7 @@ h3 {
 }
 
 .service-photo {
-  min-height: 96px;
+  min-height: clamp(110px, 14vw, 160px);
   border: 1px solid var(--line-strong);
   display: grid;
   place-items: center;
@@ -368,21 +375,14 @@ h3 {
 }
 
 .feature-grid {
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(26px, 3vw, 44px);
 }
 
 .feature-item {
-  display: grid;
-  grid-template-columns: 80px minmax(0, 1fr);
-  gap: var(--space-5);
-  align-items: start;
-  padding: var(--space-10) 0;
-  border-top: 1px solid var(--line);
-}
-
-.feature-item:first-child {
-  border-top: 0;
+  border: 1px solid var(--line);
+  padding: clamp(28px, 3vw, 44px);
 }
 
 .feature-index {
@@ -428,10 +428,11 @@ h3 {
 
 .faq-list {
   border-top: 1px solid var(--line-strong);
+  margin-top: var(--space-block);
 }
 
 .faq-item {
-  padding: var(--space-6) 0;
+  padding: var(--space-inner) 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -454,11 +455,11 @@ h3 {
 
 .contact-box {
   border: 1px solid var(--line-strong);
-  padding: var(--space-12);
+  padding: clamp(42px, 5vw, 72px);
 }
 
 .contact-box > p {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-block);
 }
 
 .contact-list {
@@ -468,7 +469,7 @@ h3 {
 
 .contact-list p {
   margin: 0;
-  padding: 14px 0;
+  padding: var(--space-inner) 0;
   border-top: 1px solid var(--line);
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
@@ -494,7 +495,7 @@ h3 {
 }
 
 .cta-actions {
-  margin-top: var(--space-8);
+  margin-top: var(--space-block);
 }
 
 .footer {
@@ -521,7 +522,7 @@ h3 {
 
   .section,
   .hero {
-    padding-block: var(--space-14);
+    padding-block: var(--space-section-md);
   }
 
   .hero-grid,
@@ -535,7 +536,7 @@ h3 {
   .hero-visual {
     border-left: 0;
     border-top: 1px solid var(--line);
-    padding: var(--space-8) 0 0;
+    padding: var(--space-block) 0 0;
   }
 
   .worry-list li:nth-child(-n + 2) {
@@ -562,12 +563,17 @@ h3 {
   }
 
   .service-photo {
-    min-height: 84px;
+    min-height: 100px;
   }
 
   .inline-cta {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-inner);
   }
 }
 
