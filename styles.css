@@ -1,19 +1,18 @@
+@font-face {
+  font-family: "Tsunagi Gothic";
+  src: url("assets/fonts/tsunagi-gothic.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #f7f7f5;
   --surface: #ffffff;
-  --card: #ffffff;
   --text: #111111;
-  --muted: #5f5f5f;
-  --accent: #111111;
-  --accent-weak: #f7f7f5;
-  --line: #e2e2e2;
-
-  --radius-sm: 8px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
-
-  --container: 1120px;
-
+  --muted: #666666;
+  --line: #dddddd;
+  --container: 1160px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
@@ -22,8 +21,9 @@
   --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
-  --space-18: 72px;
-  --space-22: 88px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
 }
 
 * { box-sizing: border-box; }
@@ -32,21 +32,22 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--surface);
   color: var(--text);
-  font-family: "Noto Sans JP", "Yu Gothic", "Yu Gothic UI", "Hiragino Sans", Meiryo, sans-serif;
-  line-height: 1.8;
+  font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
   letter-spacing: 0.01em;
 }
 
-h1, h2, h3, p, figure { margin: 0; }
+h1, h2, h3, p, figure, ul { margin: 0; }
 
+h1, h2, h3,
 .hero-label,
 .section-eyebrow,
-.visual-kicker,
-.card h3,
-.faq-item h3 {
-  font-family: "A1 Gothic", "A1ゴシック", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+.service-number,
+.contact-address {
+  font-family: "Tsunagi Gothic", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
 }
 
 a {
@@ -54,25 +55,27 @@ a {
   text-decoration: none;
 }
 
+.header-inner,
+.container,
+.hero-grid,
+.footer-inner,
+.area-box,
+.cta-box {
+  width: min(var(--container), calc(100% - 64px));
+  margin-inline: auto;
+}
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--line);
-  background: var(--surface);
-}
-
-.header-inner,
-.container,
-.hero-grid,
-.footer-inner,
-.area-box {
-  width: min(var(--container), calc(100% - 48px));
-  margin-inline: auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
 }
 
 .header-inner {
-  min-height: 72px;
+  min-height: 74px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,9 +96,8 @@ a {
 .nav {
   display: flex;
   align-items: center;
+  gap: 10px 22px;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 10px 20px;
   color: var(--muted);
   font-size: 14px;
 }
@@ -110,12 +112,11 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 11px 22px;
+  min-height: 48px;
+  padding: 12px 24px;
   border: 1px solid transparent;
-  border-radius: 4px;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   line-height: 1.4;
 }
 
@@ -125,7 +126,7 @@ a {
 }
 
 .button.secondary {
-  border-color: #dddddd;
+  border-color: var(--line);
   background: #ffffff;
   color: #111111;
 }
@@ -136,70 +137,81 @@ a {
   font-size: 14px;
 }
 
+.section {
+  padding-block: var(--space-24);
+  background: var(--surface);
+}
+
+.section-divider {
+  border-bottom: 1px solid var(--line);
+}
+
 .hero {
-  padding-block: 56px 44px;
+  padding-top: var(--space-20);
+  background: var(--bg);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.96fr);
-  gap: var(--space-10);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: var(--space-12);
+  align-items: stretch;
 }
 
 .hero-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 640px;
 }
 
 .hero-label,
-.visual-kicker,
 .section-eyebrow {
   margin-bottom: var(--space-3);
-  color: var(--text);
+  color: #111111;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
 h1 {
-  margin-bottom: var(--space-5);
-  font-family: "A1 Gothic", "A1ゴシック", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
-  font-size: clamp(30px, 4.4vw, 50px);
+  margin-bottom: var(--space-6);
+  font-size: clamp(36px, 5vw, 66px);
   font-weight: 800;
-  line-height: 1.28;
+  line-height: 1.25;
   letter-spacing: 0.02em;
 }
 
 h2 {
   margin-bottom: var(--space-4);
-  font-family: "A1 Gothic", "A1ゴシック", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
-  font-size: clamp(26px, 3vw, 38px);
+  font-size: clamp(30px, 3.8vw, 46px);
   font-weight: 700;
-  line-height: 1.36;
+  line-height: 1.35;
   letter-spacing: 0.02em;
 }
 
 h3 {
-  margin-bottom: var(--space-3);
-  font-family: "A1 Gothic", "A1ゴシック", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
-  font-size: 20px;
+  margin-bottom: var(--space-2);
+  font-size: clamp(22px, 2.1vw, 30px);
   font-weight: 700;
-  line-height: 1.55;
-  letter-spacing: 0.015em;
+  line-height: 1.45;
 }
 
 .lead,
 .section-copy,
+figcaption,
 .card p,
+.service-text p,
 .faq-item p,
 .message-box p,
-.visual-subcard p,
-figcaption {
+.contact-info p,
+.area-box,
+.cta-note {
   color: var(--muted);
 }
 
 .lead {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   font-size: 17px;
 }
 
@@ -218,8 +230,7 @@ figcaption {
 .photo-frame {
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: #f7f7f5;
+  background: var(--bg);
 }
 
 .photo-frame img {
@@ -227,94 +238,114 @@ figcaption {
   height: 100%;
   object-fit: cover;
   display: block;
-  font-size: 12px;
-  color: #666666;
-  line-height: 1.5;
 }
 
-.hero-photo-block {
+.hero-photo-block,
+.service-photo-block,
+.contact-photo-block {
   display: grid;
   gap: 10px;
 }
 
 .hero-photo {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 3.3;
 }
 
 figcaption {
   font-size: 13px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 .service-tags {
-  margin: 0;
-  padding: 0;
   list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 8px 12px;
 }
 
 .service-tags li {
-  padding: 6px 12px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: var(--surface);
+  padding: 0 0 2px;
+  border-bottom: 1px solid var(--line);
   font-size: 13px;
-  font-weight: 600;
+  color: #555555;
 }
-
-.visual-subcard,
-.card,
-.worry,
-.faq-item,
-.contact-info,
-.inline-cta,
-.message-box {
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: var(--card);
-}
-
-.card,
-.faq-item,
-.message-box { padding: var(--space-6); }
-
-.visual-subcard,
-.inline-cta,
-.contact-info { padding: 18px 20px; }
 
 .area-note {
-  padding-bottom: 8px;
+  padding: var(--space-8) 0 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
 }
 
 .area-box {
-  padding: 14px var(--space-4);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  color: var(--muted);
+  padding: 0 0 var(--space-8);
   font-size: 14px;
 }
 
-.section {
-  padding-block: var(--space-22);
-}
-
-.section.paper {
-  background: var(--surface);
-  border-block: 1px solid #dddddd;
-}
-
 .section-head {
-  max-width: 860px;
-  margin-bottom: var(--space-8);
+  max-width: 900px;
+  margin-bottom: var(--space-10);
 }
 
 .section-head-tight {
   margin-bottom: var(--space-6);
 }
 
-.section-copy,
+.worry-list {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.worry-list li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.worry-list li:first-child {
+  border-top: 0;
+}
+
+.inline-cta {
+  margin-top: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.inline-cta p {
+  color: #111111;
+  font-weight: 500;
+}
+
+.service-list {
+  border-top: 1px solid var(--line);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-8);
+  padding-block: var(--space-10);
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.service-number {
+  font-size: 24px;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.service-photo {
+  aspect-ratio: 4 / 2.8;
+}
+
+.service-text p,
 .card p,
 .faq-item p,
 .message-box p,
@@ -322,121 +353,59 @@ figcaption {
   font-size: 15px;
 }
 
-.worry-list,
 .grid {
   display: grid;
   gap: var(--space-4);
 }
 
-.worry-list {
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.worry {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 16px;
-}
-
-.check {
-  width: 22px;
-  height: 22px;
-  border-radius: 2px;
-  flex: 0 0 auto;
-  display: grid;
-  place-items: center;
-  margin-top: 4px;
-  background: #111111;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.worry p,
-.fit-list li { line-height: 1.75; }
-
-.inline-cta {
-  margin-top: var(--space-6);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  background: var(--accent-weak);
-}
-
-.inline-cta p {
-  color: #111111;
-  font-weight: 600;
-}
-
-.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-.service-grid {
-  gap: var(--space-5);
-}
-
-.service-card {
-  display: grid;
-  align-content: start;
-  gap: var(--space-3);
-}
-
-.service-photo-block {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 2px;
-}
-
-.service-photo {
-  aspect-ratio: 4 / 2.7;
-}
-
-.service-photo-block figcaption {
-  font-size: 12px;
-  color: var(--muted);
+.card,
+.message-box,
+.faq-item,
+.contact-info {
+  border: 1px solid var(--line);
+  padding: var(--space-6);
+  background: var(--surface);
 }
 
 .number {
-  width: 38px;
-  height: 38px;
+  display: inline-block;
   margin-bottom: var(--space-4);
-  border-radius: 4px;
-  border: 1px solid var(--line);
-  background: #f7f7f5;
-  color: #111111;
-  font-weight: 700;
-  display: grid;
-  place-items: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  font-family: "Tsunagi Gothic", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 28px;
+  line-height: 1;
 }
 
 .fit-list {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
   display: grid;
   gap: 10px;
 }
 
 .fit-list li {
   position: relative;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 .fit-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.74em;
-  width: 7px;
-  height: 7px;
-  border-radius: 2px;
+  top: 0.82em;
+  width: 5px;
+  height: 1px;
   background: #111111;
-}
-
-.message-box {
-  background: #f7f7f5;
 }
 
 .faq-list {
@@ -445,30 +414,23 @@ figcaption {
 }
 
 .faq-item h3 {
-  margin-bottom: 8px;
-  font-size: 18px;
+  margin-bottom: var(--space-2);
+  font-size: 22px;
 }
 
 .text-link {
   display: inline-flex;
   margin-top: var(--space-6);
-  color: #111111;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #aaaaaa;
   font-weight: 700;
 }
 
 .cta-section {
-  padding-block: var(--space-22);
+  background: var(--bg);
 }
 
 .cta-box {
-  width: min(900px, calc(100% - 48px));
-  margin-inline: auto;
-  padding: 36px;
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  text-align: center;
+  padding-block: var(--space-16);
 }
 
 .cta-box > p {
@@ -476,25 +438,14 @@ figcaption {
 }
 
 .contact-info {
-  margin: 0 auto var(--space-6);
-  width: min(720px, 100%);
-  background: var(--bg);
+  margin-bottom: var(--space-6);
 }
 
 .contact-address {
-  margin: 6px 0 !important;
+  margin: 8px 0 !important;
   color: #111111;
-  font-size: clamp(20px, 2.7vw, 26px);
+  font-size: clamp(22px, 2.8vw, 32px);
   font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-.contact-photo-block {
-  margin: 0 auto var(--space-6);
-  display: grid;
-  gap: 10px;
-  width: min(680px, 100%);
-  text-align: left;
 }
 
 .contact-photo {
@@ -503,14 +454,13 @@ figcaption {
 
 .cta-note {
   margin-top: var(--space-5) !important;
-  margin-bottom: 0 !important;
   font-size: 14px;
-  color: var(--muted);
 }
 
 .footer {
-  padding: 34px 0;
+  padding-block: var(--space-8);
   border-top: 1px solid var(--line);
+  background: #ffffff;
 }
 
 .footer-inner {
@@ -523,39 +473,30 @@ figcaption {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 20px;
+  gap: 10px 20px;
 }
-
-.copyright { color: #666666; }
 
 @media (max-width: 980px) {
   .nav { display: none; }
 
+  .section,
   .hero {
-    padding-block: 48px 32px;
+    padding-block: var(--space-16);
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
-
-  .hero-main {
-    max-width: 100%;
-  }
-
-  .hero-photo {
-    aspect-ratio: 16 / 10;
-  }
-
-  .section {
-    padding-block: var(--space-18);
-  }
-
-  .grid.three,
+  .hero-grid,
+  .service-item,
   .grid.two,
-  .worry-list {
+  .grid.three {
     grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    gap: var(--space-5);
+  }
+
+  .service-number {
+    font-size: 18px;
   }
 
   .inline-cta {
@@ -571,14 +512,20 @@ figcaption {
   .footer-inner,
   .area-box,
   .cta-box {
-    width: min(var(--container), calc(100% - 32px));
+    width: min(var(--container), calc(100% - 36px));
   }
 
-  .header-inner { min-height: 62px; }
+  .header-inner {
+    min-height: 64px;
+  }
 
-  .brand-logo img { height: 32px; }
+  .brand-logo img {
+    height: 34px;
+  }
 
-  h1 { font-size: clamp(28px, 8vw, 36px); }
+  h1 {
+    font-size: clamp(32px, 10vw, 44px);
+  }
 
   .hero-actions,
   .cta-actions {
@@ -586,21 +533,16 @@ figcaption {
     align-items: stretch;
   }
 
-  .button { width: 100%; }
-
-  .service-tags {
-    gap: 6px;
+  .button {
+    width: 100%;
   }
 
   .card,
   .faq-item,
   .message-box,
+  .contact-info,
   .cta-box {
     padding: 18px;
-  }
-
-  .section {
-    padding-block: 64px;
   }
 
   .footer-nav {
