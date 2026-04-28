@@ -7,11 +7,11 @@
 }
 
 :root {
-  --bg: #f7f7f5;
+  --bg: #f5f5f5;
   --surface: #ffffff;
   --text: #111111;
-  --muted: #666666;
-  --line: #dddddd;
+  --muted: #505050;
+  --line: #d6d6d6;
   --container: 1160px;
   --space-2: 8px;
   --space-3: 12px;
@@ -21,6 +21,7 @@
   --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
+  --space-14: 56px;
   --space-16: 64px;
   --space-20: 80px;
   --space-24: 96px;
@@ -36,7 +37,7 @@ body {
   color: var(--text);
   font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
   font-size: 16px;
-  line-height: 1.85;
+  line-height: 1.9;
   letter-spacing: 0.01em;
 }
 
@@ -46,7 +47,7 @@ h1, h2, h3,
 .hero-label,
 .section-eyebrow,
 .service-number,
-.contact-address {
+.feature-index {
   font-family: "Tsunagi Gothic", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
 }
 
@@ -70,8 +71,7 @@ a {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .header-inner {
@@ -114,19 +114,15 @@ a {
   justify-content: center;
   min-height: 48px;
   padding: 12px 24px;
-  border: 1px solid transparent;
+  border: 1px solid #111111;
+  background: #111111;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 700;
   line-height: 1.4;
 }
 
-.button:not(.secondary) {
-  background: #111111;
-  color: #ffffff;
-}
-
 .button.secondary {
-  border-color: var(--line);
   background: #ffffff;
   color: #111111;
 }
@@ -153,8 +149,8 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-  gap: var(--space-12);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: var(--space-14);
   align-items: stretch;
 }
 
@@ -162,7 +158,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 640px;
+  max-width: 700px;
 }
 
 .hero-label,
@@ -171,42 +167,42 @@ a {
   color: #111111;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
 }
 
 h1 {
   margin-bottom: var(--space-6);
-  font-size: clamp(36px, 5vw, 66px);
-  font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
+  font-size: clamp(40px, 5.4vw, 72px);
+  font-weight: 760;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
 }
 
 h2 {
   margin-bottom: var(--space-4);
-  font-size: clamp(30px, 3.8vw, 46px);
-  font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 740;
+  line-height: 1.27;
+  letter-spacing: 0.01em;
 }
 
 h3 {
   margin-bottom: var(--space-2);
-  font-size: clamp(22px, 2.1vw, 30px);
+  font-size: clamp(22px, 2.2vw, 30px);
   font-weight: 700;
   line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
 .lead,
 .section-copy,
-figcaption,
 .card p,
 .service-text p,
 .faq-item p,
 .message-box p,
-.contact-info p,
 .area-box,
-.cta-note {
+.hero-note,
+.contact-list p {
   color: var(--muted);
 }
 
@@ -223,52 +219,46 @@ figcaption,
 }
 
 .hero-visual {
-  display: grid;
-  gap: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
 }
 
-.photo-frame {
-  overflow: hidden;
+.photo-slot {
+  min-height: 340px;
   border: 1px solid var(--line);
-  background: var(--bg);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--space-4);
+  background: #ffffff;
 }
 
-.photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-photo-block,
-.service-photo-block,
-.contact-photo-block {
-  display: grid;
-  gap: 10px;
-}
-
-.hero-photo {
-  aspect-ratio: 4 / 3.3;
-}
-
-figcaption {
-  font-size: 13px;
-  line-height: 1.7;
+.photo-slot span {
+  font-size: 12px;
+  color: #666666;
+  letter-spacing: 0.05em;
 }
 
 .service-tags {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 12px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
 }
 
 .service-tags li {
-  padding: 0 0 2px;
+  padding: 10px 0;
   border-bottom: 1px solid var(--line);
-  font-size: 13px;
-  color: #555555;
+  font-size: 14px;
+  color: #333333;
+}
+
+.hero-note {
+  font-size: 14px;
 }
 
 .area-note {
@@ -283,12 +273,12 @@ figcaption {
 }
 
 .section-head {
-  max-width: 900px;
-  margin-bottom: var(--space-10);
+  max-width: 920px;
+  margin-bottom: var(--space-12);
 }
 
 .section-head-tight {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
 }
 
 .worry-list {
@@ -299,7 +289,7 @@ figcaption {
 }
 
 .worry-list li {
-  padding: 16px 0;
+  padding: 17px 2px;
   border-top: 1px solid var(--line);
 }
 
@@ -326,36 +316,40 @@ figcaption {
   border-top: 1px solid var(--line);
 }
 
+.service-list.compact {
+  border-bottom: 1px solid var(--line);
+}
+
 .service-item {
   display: grid;
-  grid-template-columns: 64px minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: 72px minmax(0, 1fr);
   gap: var(--space-8);
   padding-block: var(--space-10);
   border-bottom: 1px solid var(--line);
   align-items: start;
 }
 
-.service-number {
-  font-size: 24px;
-  line-height: 1;
-  padding-top: 4px;
+.service-list.compact .service-item:last-child {
+  border-bottom: 0;
 }
 
-.service-photo {
-  aspect-ratio: 4 / 2.8;
+.service-number {
+  font-size: 30px;
+  line-height: 1;
+  padding-top: 2px;
 }
 
 .service-text p,
 .card p,
 .faq-item p,
 .message-box p,
-.contact-info p {
+.contact-list p {
   font-size: 15px;
 }
 
 .grid {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .grid.three {
@@ -367,22 +361,21 @@ figcaption {
 }
 
 .card,
-.message-box,
-.faq-item,
-.contact-info {
+.message-box {
   border: 1px solid var(--line);
-  padding: var(--space-6);
+  padding: var(--space-8);
   background: var(--surface);
 }
 
-.number {
-  display: inline-block;
-  margin-bottom: var(--space-4);
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--line);
-  font-family: "Tsunagi Gothic", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
-  font-size: 28px;
-  line-height: 1;
+.feature-index {
+  margin-bottom: var(--space-5);
+  font-size: 14px;
+  color: #555555;
+  letter-spacing: 0.06em;
+}
+
+.feature-card h3 {
+  font-size: 27px;
 }
 
 .fit-list {
@@ -402,26 +395,30 @@ figcaption {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.82em;
-  width: 5px;
+  top: 0.88em;
+  width: 6px;
   height: 1px;
   background: #111111;
 }
 
 .faq-list {
-  display: grid;
-  gap: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .faq-item h3 {
   margin-bottom: var(--space-2);
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .text-link {
   display: inline-flex;
   margin-top: var(--space-6);
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #8b8b8b;
   font-weight: 700;
 }
 
@@ -437,24 +434,32 @@ figcaption {
   margin-bottom: var(--space-6);
 }
 
-.contact-info {
-  margin-bottom: var(--space-6);
+.contact-list {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.contact-address {
-  margin: 8px 0 !important;
+.contact-list p {
+  margin: 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact-list p:first-child {
+  border-top: 0;
   color: #111111;
-  font-size: clamp(22px, 2.8vw, 32px);
-  font-weight: 700;
+  font-size: 20px;
+  font-family: "Tsunagi Gothic", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
 }
 
-.contact-photo {
-  aspect-ratio: 16 / 7;
+.contact-list span {
+  display: inline-block;
+  min-width: 88px;
+  color: #111111;
 }
 
-.cta-note {
-  margin-top: var(--space-5) !important;
-  font-size: 14px;
+.cta-actions {
+  margin-top: var(--space-6);
 }
 
 .footer {
@@ -491,12 +496,16 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
+  .photo-slot {
+    min-height: 200px;
+  }
+
   .service-item {
     gap: var(--space-5);
   }
 
   .service-number {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .inline-cta {
@@ -524,7 +533,7 @@ figcaption {
   }
 
   h1 {
-    font-size: clamp(32px, 10vw, 44px);
+    font-size: clamp(34px, 10vw, 48px);
   }
 
   .hero-actions,
@@ -538,9 +547,7 @@ figcaption {
   }
 
   .card,
-  .faq-item,
   .message-box,
-  .contact-info,
   .cta-box {
     padding: 18px;
   }
@@ -548,5 +555,9 @@ figcaption {
   .footer-nav {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .contact-list span {
+    min-width: 72px;
   }
 }
