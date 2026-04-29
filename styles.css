@@ -117,9 +117,10 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 12px 24px;
+  min-height: 58px;
+  padding: 0 30px;
   border: 1px solid #111111;
+  border-radius: 16px;
   background: #111111;
   color: #ffffff;
   font-size: 15px;
@@ -148,14 +149,14 @@ a {
 }
 
 .hero {
-  padding-top: clamp(108px, 10vw, 148px);
-  padding-bottom: clamp(96px, 9vw, 140px);
+  padding-top: clamp(96px, 8.5vw, 132px);
+  padding-bottom: clamp(88px, 8vw, 124px);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
-  gap: clamp(48px, 6vw, 84px);
+  grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+  gap: clamp(40px, 4.8vw, 72px);
   align-items: center;
 }
 
@@ -169,7 +170,7 @@ a {
 
 .hero-label,
 .section-eyebrow {
-  margin-bottom: var(--space-inner);
+  margin-bottom: 24px;
   color: #111111;
   font-size: 12px;
   font-weight: 700;
@@ -177,11 +178,11 @@ a {
 }
 
 h1 {
-  margin-bottom: clamp(24px, 3vw, 36px);
-  font-size: clamp(52px, 6vw, 82px);
+  margin-bottom: clamp(38px, 4.2vw, 48px);
+  font-size: clamp(52px, 5vw, 86px);
   font-weight: 800;
-  line-height: 1.18;
-  letter-spacing: 0.015em;
+  line-height: 1.24;
+  letter-spacing: -0.05em;
 }
 
 h2 {
@@ -213,17 +214,17 @@ h3 {
 }
 
 .lead {
-  margin-bottom: var(--space-block);
+  margin-bottom: clamp(40px, 4.2vw, 48px);
   font-size: 16px;
-  line-height: 2.1;
-  max-width: 590px;
+  line-height: 2.05;
+  max-width: 448px;
 }
 
 .hero-actions,
 .cta-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-inner);
+  gap: 20px;
 }
 
 .hero-visual {
@@ -234,7 +235,7 @@ h3 {
 .hero-visual picture {
   display: block;
   width: 100%;
-  max-width: 540px;
+  max-width: 640px;
 }
 
 .hero-visual img {
