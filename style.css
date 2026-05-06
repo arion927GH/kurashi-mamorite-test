@@ -43,17 +43,17 @@ img { max-width: 100%; display: block; }
 }
 .header-inner {
   width: calc(100% - 112px);
-  min-height: 96px;
+  min-height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 36px;
 }
 .brand-logo {
   flex-shrink: 0;
 }
 .brand-logo img {
-  width: clamp(210px, 16vw, 230px);
+  width: clamp(190px, 14.5vw, 210px);
   height: auto;
 }
 .nav {
@@ -84,7 +84,7 @@ img { max-width: 100%; display: block; }
 .button.secondary { background: var(--white); color: var(--black); }
 .nav-cta {
   width: 160px;
-  min-height: 54px;
+  min-height: 48px;
   padding: 0 18px;
   border-color: var(--beige);
   border-radius: 14px;
@@ -95,37 +95,37 @@ img { max-width: 100%; display: block; }
 
 /* Header / first view */
 .hero {
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - 84px);
   display: flex;
   align-items: center;
   overflow: hidden;
   background: var(--white);
-  padding: 56px 0 64px;
+  padding: 40px 0 52px;
 }
 .hero .container {
   width: 100%;
 }
 .hero-grid {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 0 clamp(48px, 5vw, 72px);
+  padding: 0 0 0 clamp(48px, 5vw, 72px);
   display: grid;
-  grid-template-columns: 37% 63%;
-  column-gap: clamp(36px, 4vw, 64px);
+  grid-template-columns: 34% 66%;
+  column-gap: clamp(24px, 3vw, 44px);
   align-items: center;
 }
 .hero-main {
   width: 100%;
-  max-width: 430px;
+  max-width: 390px;
 }
 .hero-title {
   margin: 0;
   color: #111;
-  font-size: clamp(58px, 5vw, 72px);
+  font-size: clamp(54px, 4.6vw, 66px);
   font-weight: 900;
-  letter-spacing: -0.07em;
-  line-height: 1.22;
+  letter-spacing: -0.075em;
+  line-height: 1.2;
 }
 .hero-title span {
   display: block;
@@ -136,12 +136,12 @@ img { max-width: 100%; display: block; }
 }
 .hero .lead {
   width: 100%;
-  max-width: 390px;
-  margin: 42px 0 0;
+  max-width: 360px;
+  margin: 36px 0 0;
   color: #111;
   font-size: 16px;
-  line-height: 2;
-  letter-spacing: 0.03em;
+  line-height: 2.05;
+  letter-spacing: 0.025em;
 }
 .hero-actions {
   display: flex;
@@ -150,17 +150,18 @@ img { max-width: 100%; display: block; }
   margin-top: 46px;
 }
 .hero .hero-actions {
-  margin-top: 36px;
+  gap: 14px;
+  margin-top: 32px;
 }
 .hero .button {
-  min-height: 52px;
-  height: 52px;
-  padding: 0 34px;
+  min-height: 48px;
+  height: 48px;
+  padding: 0 32px;
   border: 1px solid var(--beige);
-  border-radius: 14px;
+  border-radius: 15px;
   background: var(--beige);
   color: var(--white);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
 .hero .button.secondary {
@@ -173,6 +174,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+  margin-right: -70px;
 }
 .hero-visual picture {
   display: flex;
@@ -180,12 +182,13 @@ img { max-width: 100%; display: block; }
   width: 100%;
 }
 .hero-visual img {
-  width: min(760px, 100%);
-  max-width: 760px;
-  max-height: calc(100vh - 190px);
+  width: min(980px, 118%);
+  max-width: none;
+  max-height: calc(100vh + 110px);
   height: auto;
   object-fit: contain;
   display: block;
+  transform: translate(38px, 22px);
 }
 
 
@@ -388,11 +391,13 @@ h3 {
   .hero-visual {
     justify-content: center;
     width: min(100%, 520px);
+    margin-right: 0;
   }
   .hero-visual picture { justify-content: center; }
   .hero-visual img {
     width: 100%;
     max-height: none;
+    transform: none;
   }
   .section-title { justify-content: flex-start; text-align: left; }
   .contact-list p { grid-template-columns: 1fr; }
