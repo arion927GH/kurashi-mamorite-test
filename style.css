@@ -53,7 +53,7 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 .brand-logo img {
-  width: clamp(176px, 13.2vw, 190px);
+  width: clamp(210px, 16.5vw, 236px);
   height: auto;
 }
 .nav {
@@ -84,8 +84,9 @@ img { max-width: 100%; display: block; }
 .button.secondary { background: var(--white); color: var(--black); }
 .nav-cta {
   width: 160px;
-  min-height: 46px;
-  padding: 0 18px;
+  min-height: 44px;
+  height: 44px;
+  padding: 0 28px;
   border-color: var(--beige);
   border-radius: 14px;
   background: var(--beige);
@@ -97,10 +98,10 @@ img { max-width: 100%; display: block; }
 .hero {
   min-height: calc(100vh - 86px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   background: var(--white);
-  padding: 28px 0 38px;
+  padding: 14px 0 30px;
 }
 .hero .container {
   width: 100%;
@@ -109,11 +110,11 @@ img { max-width: 100%; display: block; }
   width: 100%;
   max-width: var(--hero-container);
   margin: 0 auto;
-  padding: 0 clamp(48px, 4vw, 56px);
+  padding: 0 48px;
   display: grid;
   grid-template-columns: minmax(0, 41%) minmax(0, 59%);
-  column-gap: clamp(16px, 1.6vw, 24px);
-  align-items: center;
+  column-gap: 10px;
+  align-items: flex-start;
 }
 .hero-main {
   width: 100%;
@@ -122,10 +123,10 @@ img { max-width: 100%; display: block; }
 .hero-title {
   margin: 0;
   color: #111;
-  font-size: clamp(72px, 5.7vw, 78px);
+  font-size: clamp(68px, 5.35vw, 76px);
   font-weight: 900;
-  letter-spacing: -0.065em;
-  line-height: 1.08;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 .hero-title span {
   display: block;
@@ -136,11 +137,11 @@ img { max-width: 100%; display: block; }
 }
 .hero .lead {
   width: 100%;
-  max-width: 450px;
-  margin: 32px 0 0;
+  max-width: 490px;
+  margin: 28px 0 0;
   color: #111;
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.95;
   letter-spacing: 0.02em;
 }
 .hero-actions {
@@ -151,7 +152,7 @@ img { max-width: 100%; display: block; }
 }
 .hero .hero-actions {
   gap: 16px;
-  margin-top: 36px;
+  margin-top: 30px;
 }
 .hero .button {
   min-height: 56px;
@@ -182,13 +183,13 @@ img { max-width: 100%; display: block; }
   width: 100%;
 }
 .hero-visual img {
-  width: min(1120px, 132%);
+  width: min(1210px, 142%);
   max-width: none;
-  max-height: calc(100vh + 120px);
+  max-height: calc(100vh + 150px);
   height: auto;
   object-fit: contain;
   display: block;
-  transform: translate(-28px, 22px);
+  transform: translate(-72px, 8px);
 }
 
 
