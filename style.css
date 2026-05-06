@@ -93,41 +93,49 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
+/* Header / first view */
 .hero {
   background: var(--white);
-  padding: 76px 0 92px;
-  min-height: 852px;
+  padding: 0;
 }
 .hero .container {
-  width: min(var(--hero-container), calc(100% - 112px));
+  width: min(1440px, 100%);
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 39fr) minmax(0, 61fr);
-  gap: clamp(42px, 4vw, 64px);
-  align-items: start;
+  grid-template-columns: minmax(420px, 0.38fr) minmax(0, 0.62fr);
+  column-gap: clamp(40px, 5vw, 72px);
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px clamp(40px, 5vw, 72px) 80px;
 }
 .hero-main {
   width: 100%;
   max-width: 500px;
 }
-.hero h1 {
+.hero-title {
   margin: 0;
-  max-width: 500px;
   color: #111;
-  font-size: clamp(56px, 6vw, 82px);
+  font-size: clamp(56px, 5.2vw, 74px);
   font-weight: 900;
   letter-spacing: -0.06em;
-  line-height: 1.25;
+  line-height: 1.32;
+  white-space: nowrap;
 }
-.hero h1 span { color: var(--beige); }
+.hero-title span {
+  display: block;
+}
+.hero-title .accent {
+  color: var(--beige);
+}
 .hero .lead {
   width: 100%;
   max-width: 390px;
-  margin: 52px 0 0;
+  margin: 48px 0 0;
   color: #111;
   font-size: 16px;
-  line-height: 2.1;
+  line-height: 2.05;
   letter-spacing: 0.03em;
 }
 .hero-actions {
@@ -137,7 +145,7 @@ img { max-width: 100%; display: block; }
   margin-top: 46px;
 }
 .hero .hero-actions {
-  margin-top: 42px;
+  margin-top: 40px;
 }
 .hero .button {
   min-height: 54px;
@@ -155,19 +163,22 @@ img { max-width: 100%; display: block; }
   color: #111;
 }
 .hero-visual {
-  justify-self: end;
-  align-self: start;
-  width: min(760px, 100%);
-  max-width: 780px;
-  transform: translateY(-26px);
+  justify-self: stretch;
+  align-self: center;
+  width: 100%;
 }
 .hero-visual picture,
 .hero-visual img { width: 100%; }
 .hero-visual img {
+  width: min(760px, 100%);
+  max-width: 760px;
   height: auto;
-  max-height: none;
   object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
 }
+
 
 .section-title {
   display: flex;
@@ -331,22 +342,24 @@ h3 {
   .section { padding: 72px 0; }
   .hero {
     min-height: 0;
-    padding: 50px 0 64px;
+    padding: 0;
   }
   .hero .container { width: min(var(--container), calc(100% - 48px)); }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 50px 0 64px;
   }
   .hero-main,
   .hero .lead {
     width: 100%;
     max-width: none;
   }
-  .hero h1 {
-    font-size: clamp(42px, 13vw, 58px);
+  .hero-title {
+    font-size: clamp(42px, 13vw, 56px);
     line-height: 1.25;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.06em;
+    white-space: nowrap;
   }
   .hero .lead {
     margin-top: 36px;
@@ -359,6 +372,7 @@ h3 {
     margin-top: 34px;
   }
   .button { width: 100%; }
+  .nav-cta { width: auto; }
   .hero .button { width: 100%; }
   .hero-visual {
     justify-self: center;
