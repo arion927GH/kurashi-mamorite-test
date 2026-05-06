@@ -242,8 +242,8 @@ img { max-width: 100%; display: block; }
 
 .concerns-layout {
   display: grid;
-  grid-template-columns: 340px 360px 340px;
-  column-gap: 72px;
+  grid-template-columns: 400px 360px 400px;
+  column-gap: 60px;
   align-items: center;
   justify-content: center;
 }
@@ -254,19 +254,26 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
-.problem-title {
-  margin: 0;
+.problem-title,
+.concerns-title {
   font-size: 56px;
+  line-height: 1.12;
+  letter-spacing: -0.08em;
   font-weight: 900;
-  line-height: 1.18;
-  letter-spacing: -0.06em;
+  text-align: center;
+  margin: 0;
 }
 
-.problem-icon {
+.concerns-title span {
   display: block;
+}
+
+.problem-icon,
+.concerns-icon {
   width: 72px;
   height: 72px;
-  margin: 28px auto 0;
+  margin: 30px auto 0;
+  display: block;
   object-fit: contain;
 }
 
@@ -278,20 +285,22 @@ img { max-width: 100%; display: block; }
 
 .concerns-card-column {
   display: grid;
-  gap: 34px;
+  row-gap: 38px;
   align-items: center;
 }
 
-.problem-card {
-  width: 340px;
-  min-height: 88px;
-  padding: 20px 24px;
+.problem-card,
+.concern-card {
+  width: 400px;
+  min-height: 92px;
+  padding: 22px 26px;
+  box-sizing: border-box;
   background: #fff;
   border: 1.5px solid #111;
   border-radius: 10px;
   box-shadow: 8px 8px 0 #111;
   color: var(--black);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.75;
   letter-spacing: 0.04em;
@@ -305,9 +314,11 @@ img { max-width: 100%; display: block; }
 .problem-card--01 { transform: translateX(18px); }
 .problem-card--02 { transform: translateX(0); }
 .problem-card--03 { transform: translateX(-18px); }
+.concern-card.left-3 { transform: translateX(48px); }
 .problem-card--04 { transform: translateX(-18px); }
 .problem-card--05 { transform: translateX(0); }
 .problem-card--06 { transform: translateX(18px); }
+.concern-card.right-3 { transform: translateX(-48px); }
 
 .problem-bottom,
 .concerns-bottom {
@@ -325,12 +336,13 @@ img { max-width: 100%; display: block; }
   gap: 36px;
 }
 
-.problem-note {
+.problem-note,
+.concerns-bottom-copy {
   margin: 0;
   font-size: 17px;
   font-weight: 500;
   line-height: 1.8;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-align: center;
   white-space: nowrap;
 }
@@ -557,6 +569,10 @@ h3 {
     margin-top: 24px;
   }
 
+  .concerns-icon {
+    margin: 30px auto 0;
+  }
+
   .concerns-card-column {
     width: 100%;
     gap: 18px;
@@ -566,6 +582,11 @@ h3 {
   .problem-card {
     width: min(100%, 560px);
     min-height: auto;
+    transform: none;
+  }
+
+  .concern-card.left-3,
+  .concern-card.right-3 {
     transform: none;
   }
 
@@ -652,6 +673,12 @@ h3 {
     margin-top: 28px;
   }
 
+  .concerns-icon {
+    width: 72px;
+    height: 72px;
+    margin: 30px auto 0;
+  }
+
   .concerns-card-column {
     width: 100%;
     gap: 18px;
@@ -666,6 +693,26 @@ h3 {
     box-shadow: 5px 6px 0 #111;
     font-size: 15px;
     line-height: 1.8;
+    transform: none;
+  }
+
+  .concerns-title {
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: -0.06em;
+  }
+
+  .concern-card {
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    padding: 18px 20px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .concern-card.left-3,
+  .concern-card.right-3 {
     transform: none;
   }
 
@@ -688,6 +735,12 @@ h3 {
     font-size: 14px;
     line-height: 1.8;
     white-space: normal;
+  }
+
+  .concerns-bottom-copy {
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
   }
 
   .problem-cta {
