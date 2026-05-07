@@ -604,104 +604,302 @@ img { max-width: 100%; display: block; }
 }
 
 
-#service.service-section {
+/* =========================================
+   できることブロック
+========================================= */
+
+.can-do-section {
   background: #fff;
-  color: #000;
-  padding-top: 110px;
-  padding-bottom: 140px;
+  color: #111;
+  overflow: hidden;
+  padding: 148px 0 172px;
 }
 
-#service .service-container {
-  width: 100%;
-  max-width: 1240px;
+.can-do-inner {
+  width: min(100% - 96px, 1280px);
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
-  box-sizing: border-box;
 }
 
-.service-intro {
+/* ---------- 冒頭見出しエリア ---------- */
+
+.can-do-lead {
   display: grid;
-  grid-template-columns: 420px 96px 1fr;
-  column-gap: 48px;
+  grid-template-columns: 420px 88px 1fr;
+  column-gap: 44px;
   align-items: start;
+  margin-bottom: 148px;
 }
 
-.service-intro h2 {
-  margin: 0;
-  color: #000;
-  font-size: 42px;
-  font-weight: 900;
-  line-height: 1.45;
-  letter-spacing: -0.04em;
+.can-do-heading-wrap {
   text-align: center;
 }
 
-.service-intro h2::after {
-  content: "";
-  display: block;
-  width: 72px;
-  height: 3px;
-  margin: 22px auto 0;
-  background: #C3B091;
+.can-do-heading {
+  margin: 0;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.28;
+  letter-spacing: -0.05em;
 }
 
-.service-intro-icon {
-  width: 72px;
-  height: 72px;
-  margin-top: 16px;
-  justify-self: center;
+.can-do-heading-line {
+  display: block;
+  width: 96px;
+  height: 4px;
+  background: #C3B091;
+  margin: 26px auto 0;
+}
+
+.can-do-icon-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+}
+
+.can-do-icon {
+  width: 88px;
+  height: 88px;
   object-fit: contain;
 }
 
-.service-intro p {
-  max-width: 460px;
+.can-do-lead-text {
   margin: 0;
-  color: #000;
-  font-size: 16px;
-  line-height: 2.1;
-  letter-spacing: 0.04em;
+  padding-top: 4px;
+  max-width: 560px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 17px;
   font-weight: 500;
+  line-height: 2.05;
+  letter-spacing: 0.04em;
 }
 
-.service-list {
+/* ---------- サービス項目 ---------- */
+
+.can-do-list {
   display: flex;
   flex-direction: column;
-  gap: 135px;
-  margin-top: 120px;
+  gap: 148px;
 }
 
-.service-item {
+.can-do-item {
   display: grid;
   grid-template-columns: 54% 46%;
-  align-items: center;
   column-gap: 56px;
+  align-items: center;
   position: relative;
 }
 
-.service-item.reverse .service-image {
-  order: 2;
-  justify-self: end;
+.can-do-item--image-right {
+  grid-template-columns: 46% 54%;
 }
 
-.service-item.reverse .service-text { order: 1; }
+.can-do-image-wrap {
+  width: 100%;
+}
 
-.service-image img {
-  width: 560px;
-  max-width: 100%;
+.can-do-image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
-.service-text {
-  max-width: 430px;
+.can-do-text {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
 }
 
-.service-item--02 .service-text {
-  margin-left: 80px;
+.can-do-item-title {
+  margin: 0 0 26px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.42;
+  letter-spacing: -0.035em;
 }
 
-.service-item--03 .service-text {
-  max-width: 460px;
+.can-do-item-body {
+  margin: 0;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- 01 / 02 / 03 と端まで伸びる罫線 ---------- */
+
+.can-do-number {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* 01・03：数字の右から画面右端方向へ線 */
+.can-do-number--right::after {
+  content: "";
+  display: block;
+  flex: 0 0 100vw;
+  height: 1px;
+  background: #111;
+  margin-left: 20px;
+}
+
+/* 02：画面左端方向から線が来て、数字につながる */
+.can-do-number--left::before {
+  content: "";
+  display: block;
+  flex: 0 0 100vw;
+  height: 1px;
+  background: #111;
+  margin-left: -100vw;
+  margin-right: 20px;
+}
+
+/* 01・03 はテキスト側の上でやや右寄せ */
+.can-do-number--right {
+  justify-content: flex-start;
+}
+
+/* 02 は左側テキスト内で、左端から線が来る */
+.can-do-number--left {
+  justify-content: flex-start;
+}
+
+/* ---------- レスポンシブ ---------- */
+
+@media (max-width: 1024px) {
+  .can-do-section {
+    padding: 112px 0 132px;
+  }
+
+  .can-do-inner {
+    width: min(100% - 56px, 860px);
+  }
+
+  .can-do-lead {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+    text-align: center;
+    margin-bottom: 112px;
+  }
+
+  .can-do-heading {
+    font-size: 48px;
+    line-height: 1.32;
+  }
+
+  .can-do-icon-wrap {
+    padding-top: 0;
+  }
+
+  .can-do-lead-text {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .can-do-list {
+    gap: 112px;
+  }
+
+  .can-do-item,
+  .can-do-item--image-right {
+    grid-template-columns: 1fr;
+    row-gap: 42px;
+  }
+
+  .can-do-item--image-right .can-do-text {
+    order: 2;
+  }
+
+  .can-do-item--image-right .can-do-image-wrap {
+    order: 1;
+  }
+
+  .can-do-text {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .can-do-item-title {
+    font-size: 30px;
+  }
+
+  .can-do-number--right::after,
+  .can-do-number--left::before {
+    flex-basis: 160px;
+    margin-left: 18px;
+  }
+
+  .can-do-number--left::before {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .can-do-section {
+    padding: 88px 0 104px;
+  }
+
+  .can-do-inner {
+    width: min(100% - 36px, 480px);
+  }
+
+  .can-do-heading {
+    font-size: 38px;
+    line-height: 1.34;
+  }
+
+  .can-do-heading-line {
+    width: 72px;
+    height: 3px;
+    margin-top: 22px;
+  }
+
+  .can-do-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .can-do-lead-text {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .can-do-list {
+    gap: 92px;
+  }
+
+  .can-do-item-title {
+    font-size: 26px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .can-do-item-body {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .can-do-number {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .can-do-number--right::after,
+  .can-do-number--left::before {
+    flex-basis: 112px;
+  }
 }
 
 .script-no,
@@ -711,62 +909,7 @@ img { max-width: 100%; display: block; }
   line-height: 1;
 }
 
-.service-item .script-no {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0;
-  color: #000;
-  font-size: 34px;
-  line-height: 1;
-}
-
-.service-item .script-no::after,
-.service-item--02 .script-no::before {
-  content: "";
-  display: block;
-  width: 160px;
-  height: 1px;
-  background: #000;
-}
-
-.service-item--02 .script-no::after { display: none; }
-
-.service-item--01 .script-no {
-  top: -64px;
-  right: 0;
-}
-
-.service-item--02 .script-no {
-  top: -76px;
-  left: 0;
-}
-
-.service-item--03 .script-no {
-  top: -76px;
-  right: 0;
-}
-
 .script-no { font-size: 42px; }
-
-.service-text h3 {
-  margin: 0 0 28px;
-  color: #000;
-  font-size: 32px;
-  font-weight: 900;
-  line-height: 1.45;
-  letter-spacing: -0.03em;
-}
-
-.service-text p {
-  margin: 0;
-  color: #000;
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-}
 
 h3 {
   margin: 0 0 12px;
@@ -774,180 +917,10 @@ h3 {
   line-height: 1.45;
   letter-spacing: -0.02em;
 }
-.service-text p:last-child,
+
 .feature-grid p,
 .faq-item p,
 .contact-box p { margin: 0; font-size: 14px; color: #2c2c2c; }
-
-#service.service-section .service-text p:last-child {
-  color: #000;
-  font-size: 16px;
-  line-height: 2;
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  #service .service-container {
-    max-width: 1080px;
-  }
-
-  .service-intro {
-    grid-template-columns: 360px 88px 1fr;
-    column-gap: 40px;
-  }
-
-  .service-intro h2 {
-    font-size: 38px;
-  }
-
-  .service-item {
-    column-gap: 40px;
-  }
-
-  .service-image img {
-    width: 500px;
-  }
-
-  .service-text h3 {
-    font-size: 30px;
-  }
-
-  .service-item--02 .service-text {
-    margin-left: 48px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .service-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    text-align: center;
-  }
-
-  .service-intro-icon {
-    margin-top: 0;
-  }
-
-  .service-intro p {
-    max-width: 620px;
-    text-align: center;
-  }
-
-  .service-list {
-    gap: 104px;
-    margin-top: 96px;
-  }
-
-  .service-item,
-  .service-item.reverse {
-    grid-template-columns: 1fr;
-    row-gap: 34px;
-  }
-
-  .service-item.reverse .service-image,
-  .service-item.reverse .service-text {
-    order: initial;
-  }
-
-  .service-image,
-  .service-item.reverse .service-image {
-    justify-self: center;
-  }
-
-  .service-image img {
-    width: min(560px, 100%);
-  }
-
-  .service-text,
-  .service-item--02 .service-text,
-  .service-item--03 .service-text {
-    max-width: 620px;
-    margin-left: 0;
-    justify-self: center;
-    text-align: left;
-  }
-
-  .service-item .script-no,
-  .service-item--01 .script-no,
-  .service-item--02 .script-no,
-  .service-item--03 .script-no {
-    top: -48px;
-    left: 0;
-    right: auto;
-  }
-
-  .service-item .script-no::after,
-  .service-item--02 .script-no::before {
-    width: 120px;
-  }
-
-  .service-item--02 .script-no::before { display: none; }
-  .service-item--02 .script-no::after { display: block; }
-}
-
-@media (max-width: 767px) {
-  #service.service-section {
-    padding-top: 72px;
-    padding-bottom: 88px;
-  }
-
-  #service .service-container {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .service-intro {
-    gap: 18px;
-  }
-
-  .service-intro h2 {
-    font-size: 30px;
-  }
-
-  .service-intro p {
-    font-size: 15px;
-    line-height: 2;
-  }
-
-  .service-list {
-    gap: 88px;
-    margin-top: 78px;
-  }
-
-  .service-item,
-  .service-item.reverse {
-    row-gap: 26px;
-  }
-
-  .service-image img {
-    width: 100%;
-  }
-
-  .service-text h3 {
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-
-  .service-text p,
-  #service.service-section .service-text p:last-child {
-    font-size: 14.5px;
-    line-height: 2;
-  }
-
-  .service-item .script-no,
-  .service-item--01 .script-no,
-  .service-item--02 .script-no,
-  .service-item--03 .script-no {
-    top: -38px;
-    font-size: 28px;
-  }
-
-  .service-item .script-no::after,
-  .service-item--02 .script-no::before {
-    width: 86px;
-  }
-}
 
 .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .feature-grid article {
@@ -1013,14 +986,9 @@ h3 {
   .header-inner { gap: 24px; }
   .nav { gap: 0; }
   .nav a:not(.nav-cta) { display: none; }
-  .service-item,
   .feature-grid,
   .fit-grid { grid-template-columns: 1fr; }
-  .service-item.reverse .service-image,
-  .service-item.reverse .service-text { order: initial; }
   .fit-grid li:last-child { grid-column: auto; }
-  .service-image img,
-  .service-text { max-width: none; }
 }
 
 @media (max-width: 767px) {
