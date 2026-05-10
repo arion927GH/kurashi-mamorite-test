@@ -13,27 +13,39 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
-      <a href="#top" class="brand-logo" aria-label="暮らしのマモリテ トップへ"><img src="assets/logo-mamorite.svg" alt="暮らしのマモリテ" /></a>
-      <nav class="nav" aria-label="主要メニュー">
-        <a href="#service">サービス内容</a><a href="price.html">料金</a><a href="#faq">よくある質問</a><a class="button nav-cta" href="#contact">まずは相談する</a>
+    <div class="site-header__inner">
+      <a href="#top" class="site-header__logo" aria-label="暮らしのマモリテ トップへ"><img src="assets/logo-mamorite.svg" alt="暮らしのマモリテ" /></a>
+      <nav class="site-header__nav" aria-label="主要メニュー">
+        <a href="#service">サービス内容</a>
+        <a href="price.html">料金</a>
+        <a href="#faq">よくある質問</a>
       </nav>
+      <a class="site-header__cta" href="#contact">まずは相談する</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-main">
-          <h1 class="hero-title">
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">
             <span>毎日の流れを</span>
-            <span class="accent">止めない</span>
+            <span class="is-beige">止めない</span>
             <span>家事サポート</span>
           </h1>
-          <p class="lead">掃除や洗濯、買い物や料理まで、生活に欠かせない家事を継続して支えます。忙しい方や単身世帯の日常が、いつもどおり続くように。</p>
-          <div class="hero-actions"><a class="button" href="#contact">まずは相談する</a><a class="button secondary" href="price.html">料金を見る</a></div>
+          <p class="hero__lead">掃除や洗濯、買い物や料理まで、生活に欠かせない家事を継続して支えます。忙しい方や単身世帯の日常が、いつもどおり続くように。</p>
+          <div class="hero__actions">
+            <a class="hero__button hero__button--primary" href="#contact">まずは相談する</a>
+            <a class="hero__button hero__button--secondary" href="price.html">料金を見る</a>
+          </div>
+          <div class="hero__area">
+            <img src="icon-area.png" alt="" aria-hidden="true">
+            <p>東京都内を中心に承っています。近郊エリアも、内容や頻度によって対応できる場合があります。</p>
+          </div>
         </div>
-        <aside class="hero-visual" aria-label="家事サポートのコラージュ画像"><picture><source srcset="hero-collage-mobile.png" media="(max-width: 767px)"><img src="hero-collage-desktop.png" alt="暮らしを支える家事サポートのコラージュ" loading="eager"></picture></aside>
+        <div class="hero__visual">
+          <img src="hero-collage-desktop.png" alt="暮らしのマモリテの家事サポート風景" loading="eager">
+        </div>
       </div>
     </section>
 
