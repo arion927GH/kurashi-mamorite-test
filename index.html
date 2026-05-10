@@ -8,19 +8,23 @@
   <meta name="description" content="掃除や洗濯、買い物や料理まで、生活に欠かせない家事を継続して支えます。忙しい方や単身世帯の日常が、いつもどおり続くように。毎日の流れを止めない家事サポートです。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a href="#top" class="site-header__logo" aria-label="暮らしのマモリテ トップへ"><img src="assets/logo-mamorite.svg" alt="暮らしのマモリテ" /></a>
-      <nav class="site-header__nav" aria-label="主要メニュー">
+      <a href="#" class="site-header__logo" aria-label="暮らしのマモリテ トップへ">
+        <img src="logo-mamorite.svg" alt="暮らしのマモリテ">
+      </a>
+
+      <nav class="site-header__nav" aria-label="グローバルナビゲーション">
         <a href="#service">サービス内容</a>
-        <a href="price.html">料金</a>
+        <a href="#price">料金</a>
         <a href="#faq">よくある質問</a>
       </nav>
-      <a class="site-header__cta" href="#contact">まずは相談する</a>
+
+      <a href="#contact" class="site-header__cta">まずは相談する</a>
     </div>
   </header>
 
@@ -30,21 +34,32 @@
         <div class="hero__content">
           <h1 class="hero__title">
             <span>毎日の流れを</span>
-            <span class="is-beige">止めない</span>
+            <span class="is-accent">止めない</span>
             <span>家事サポート</span>
           </h1>
-          <p class="hero__lead">掃除や洗濯、買い物や料理まで、生活に欠かせない家事を継続して支えます。忙しい方や単身世帯の日常が、いつもどおり続くように。</p>
+
+          <p class="hero__lead">
+            掃除や洗濯、買い物や料理まで、生活に欠かせない家事を継続して支えます。
+            忙しい方や単身世帯の日常が、いつもどおり続くように。
+          </p>
+
           <div class="hero__actions">
-            <a class="hero__button hero__button--primary" href="#contact">まずは相談する</a>
-            <a class="hero__button hero__button--secondary" href="price.html">料金を見る</a>
+            <a href="#contact" class="hero__button hero__button--primary">まずは相談する</a>
+            <a href="#price" class="hero__button hero__button--secondary">料金を見る</a>
           </div>
+
           <div class="hero__area">
-            <img src="icon-area.png" alt="" aria-hidden="true">
-            <p>東京都内を中心に承っています。近郊エリアも、内容や頻度によって対応できる場合があります。</p>
+            <div class="hero__area-icon">
+              <img src="icon-area.png" alt="">
+            </div>
+            <p class="hero__area-text">
+              東京都内を中心に承っています。近郊エリアも、内容や頻度によって対応できる場合があります。
+            </p>
           </div>
         </div>
-        <div class="hero__visual">
-          <img src="hero-collage-desktop.png" alt="暮らしのマモリテの家事サポート風景" loading="eager">
+
+        <div class="hero__visual" aria-hidden="true">
+          <img src="hero-collage-desktop.png" alt="">
         </div>
       </div>
     </section>
