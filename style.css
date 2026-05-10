@@ -1249,3 +1249,378 @@ h3 {
   .section-title { justify-content: flex-start; text-align: left; }
   .contact-list p { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   Header / Hero adjustment
+   2026-05-10
+========================================================= */
+
+:root {
+  --color-black: #111111;
+  --color-bg: #f8f7f2;
+  --color-beige: #d8b47b;
+  --color-beige-soft: rgba(216, 180, 123, 0.14);
+  --content-max: 1440px;
+}
+
+/* 背景の白飛びを抑える */
+html,
+body {
+  background: var(--color-bg);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ヘッダーを上部固定。ただし fixed ではなく sticky */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-bg);
+  border-bottom: 4px solid var(--color-black);
+}
+
+/* ヘッダー内部 */
+.site-header__inner {
+  max-width: var(--content-max);
+  height: 82px;
+  margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* ロゴ */
+.site-header__logo img {
+  width: 190px;
+  height: auto;
+  display: block;
+}
+
+/* ナビ */
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: 42px;
+}
+
+.site-header__nav a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+/* ヘッダーCTA */
+.site-header__cta {
+  width: 176px;
+  height: 46px;
+  border-radius: 15px;
+  background: var(--color-beige);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   Hero
+========================================================= */
+
+.hero {
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.hero__inner {
+  position: relative;
+  max-width: var(--content-max);
+  min-height: 820px;
+  margin: 0 auto;
+  padding: 58px 80px 60px;
+  box-sizing: border-box;
+}
+
+/* 左テキストエリア */
+.hero__content {
+  position: relative;
+  z-index: 3;
+  width: 520px;
+}
+
+/* 大見出し */
+.hero__title {
+  margin: 0;
+  font-family: "Zen Antique", serif;
+  font-size: 72px;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+.hero__title span {
+  display: block;
+}
+
+.hero__title .is-accent {
+  color: var(--color-beige);
+}
+
+/* 既存の1本線は消す */
+.hero__title::after {
+  display: none !important;
+}
+
+/* 見本に近い斜め線：上 */
+.hero__inner::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 124px;
+  left: 520px;
+  width: 86px;
+  height: 1.5px;
+  background: var(--color-black);
+  transform: rotate(-15deg);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+/* 見本に近い斜め線：下 */
+.hero__inner::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 420px;
+  left: 520px;
+  width: 82px;
+  height: 1.5px;
+  background: var(--color-black);
+  transform: rotate(24deg);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+/* 本文 */
+.hero__lead {
+  width: 440px;
+  margin: 42px 0 0;
+  font-size: 16px;
+  line-height: 2.1;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+/* CTA */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.hero__button {
+  height: 54px;
+  border-radius: 15px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.hero__button--primary {
+  min-width: 160px;
+  color: #ffffff;
+  background: var(--color-beige);
+  border: 2px solid var(--color-beige);
+}
+
+.hero__button--secondary {
+  min-width: 142px;
+  color: var(--color-beige);
+  background: transparent;
+  border: 2px solid var(--color-beige);
+}
+
+/* 対応エリアボックス */
+.hero__area {
+  width: 420px;
+  min-height: 132px;
+  margin-top: 58px;
+  padding: 26px 28px;
+  box-sizing: border-box;
+  border-radius: 13px;
+  background: var(--color-beige-soft);
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.hero__area-icon img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.hero__area-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* コラージュ画像 */
+.hero__visual {
+  position: absolute;
+  z-index: 1;
+  top: 58px;
+  right: clamp(28px, 3.2vw, 56px);
+  width: clamp(660px, 52vw, 760px);
+  pointer-events: none;
+}
+
+.hero__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   Width adjustment
+========================================================= */
+
+@media (max-width: 1320px) {
+  .site-header__inner {
+    padding-inline: 56px;
+  }
+
+  .hero__inner {
+    padding-inline: 56px;
+  }
+
+  .hero__content {
+    width: 490px;
+  }
+
+  .hero__title {
+    font-size: 66px;
+  }
+
+  .hero__lead {
+    width: 410px;
+  }
+
+  .hero__visual {
+    width: clamp(600px, 50vw, 700px);
+    right: 28px;
+  }
+
+  .hero__inner::before,
+  .hero__inner::after {
+    left: 500px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero__inner {
+    min-height: auto;
+    padding-bottom: 56px;
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .hero__visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(100%, 760px);
+    margin: 44px auto 0;
+  }
+
+  .hero__inner::before,
+  .hero__inner::after {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header__inner {
+    height: 72px;
+    padding-inline: 24px;
+  }
+
+  .site-header__logo img {
+    width: 150px;
+  }
+
+  .site-header__nav {
+    display: none;
+  }
+
+  .site-header__cta {
+    width: 142px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  .hero__inner {
+    padding: 44px 24px 56px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+  }
+
+  .hero__lead {
+    width: 100%;
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .hero__actions {
+    margin-top: 26px;
+  }
+
+  .hero__button {
+    height: 50px;
+    padding-inline: 22px;
+    font-size: 14px;
+  }
+
+  .hero__area {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .hero__visual {
+    width: 112%;
+    margin-left: -6%;
+  }
+}
