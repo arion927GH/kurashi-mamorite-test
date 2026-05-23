@@ -454,385 +454,276 @@ h3 {
   line-height: 1.7;
 }
 
-#worries.problem-section,
-.concerns-section {
-  background: #C3B091;
-  color: var(--black);
-  overflow: hidden;
-  padding-top: 40px;
-  padding-bottom: 34px;
-  min-height: 0;
+/* =========================================================
+   Worries block
+   Illustrator見本：1440px × 1000px
+   実ブロック背景範囲：高さ560px
+========================================================= */
+
+.worries-block {
+  background: #e6be91;
 }
 
-.problem-inner,
-.concerns-inner {
-  width: 100%;
-  max-width: 1280px;
+.worries-block__inner {
+  position: relative;
+  width: 1440px;
+  height: 560px;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  background: #e6be91;
+  overflow: hidden;
+}
+
+/* -------------------------
+   共通カード
+------------------------- */
+.worries-card {
+  position: absolute;
+  background: #f7f7f7;
+  border-radius: 14px;
+  box-shadow: 8px 8px 0 #111;
+  padding: 17px 24px;
   box-sizing: border-box;
 }
 
-.concerns-layout {
-  display: grid;
-  grid-template-columns: 420px 300px 420px;
-  column-gap: 44px;
-  align-items: start;
-  justify-content: center;
-}
-
-.problem-center,
-.concerns-center {
-  width: 300px;
-  margin-top: 120px;
-  text-align: center;
-}
-
-.problem-title,
-.concerns-title {
-  font-size: 56px;
-  line-height: 1.22;
-  letter-spacing: -0.06em;
-  font-weight: 900;
-  text-align: center;
+.worries-card p {
   margin: 0;
+  font-size: 17px;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+  font-weight: 400;
 }
 
-.concerns-title span {
-  display: block;
-  white-space: nowrap;
+.worries-card p span {
+  color: #e6be91;
+  font-weight: 700;
 }
 
-.problem-icon,
-.concerns-icon {
-  width: 72px;
-  height: 72px;
-  margin: 28px auto 0;
+/* -------------------------
+   左カード
+------------------------- */
+.worries-card--l1 {
+  left: 104px;
+  top: 64px;
+  width: 350px;
+  min-height: 98px;
+}
+
+.worries-card--l2 {
+  left: 96px;
+  top: 203px;
+  width: 328px;
+  min-height: 98px;
+}
+
+.worries-card--l3 {
+  left: 80px;
+  top: 334px;
+  width: 378px;
+  min-height: 100px;
+}
+
+/* -------------------------
+   右カード
+------------------------- */
+.worries-card--r1 {
+  right: 104px;
+  top: 48px;
+  width: 368px;
+  min-height: 98px;
+}
+
+.worries-card--r2 {
+  right: 112px;
+  top: 179px;
+  width: 328px;
+  min-height: 98px;
+}
+
+.worries-card--r3 {
+  right: 102px;
+  top: 318px;
+  width: 332px;
+  min-height: 100px;
+}
+
+/* -------------------------
+   中央見出し
+------------------------- */
+.worries-block__heading-wrap {
+  position: absolute;
+  left: 50%;
+  top: 112px;
+  transform: translateX(-50%);
+  width: 430px;
+  text-align: center;
+}
+
+.worries-block__heading {
+  margin: 0;
+  font-family: "Zen Antique", serif;
+  font-size: 43px;
+  line-height: 1.72;
+  letter-spacing: 0.01em;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* -------------------------
+   中央アイコン
+------------------------- */
+.worries-block__icon {
+  position: absolute;
+  left: 50%;
+  top: 315px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+.worries-block__icon img {
   display: block;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
-.problem-cards {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.concerns-card-column {
-  display: grid;
-  row-gap: 40px;
-  align-items: center;
-}
-
-.concerns-card-column--left {
-  justify-items: start;
-}
-
-.concerns-card-column--right {
-  justify-items: end;
-}
-
-.problem-card,
-.concern-card {
-  width: 430px;
-  min-height: 108px;
-  padding: 22px 26px;
-  box-sizing: border-box;
-  background: #fff;
-  border: 1.5px solid #111;
-  border-radius: 10px;
-  box-shadow: 8px 8px 0 #111;
-  color: var(--black);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
-}
-
-.problem-card::first-letter {
-  color: #C3B091;
-  font-weight: 800;
-}
-
-.problem-card--01,
-.problem-card--02,
-.problem-card--05,
-.problem-card--06 {
-  width: 380px;
-}
-
-.problem-card--01 { transform: translateX(28px); }
-.problem-card--02 { transform: translateX(0); }
-.problem-card--03 { transform: translateX(12px); }
-.problem-card--04 { transform: translateX(-28px); }
-.problem-card--05 { transform: translateX(0); }
-.problem-card--06 { transform: translateX(-24px); }
-
-.problem-bottom,
-.concerns-bottom {
+/* -------------------------
+   下キャプション
+------------------------- */
+.worries-block__caption {
+  position: absolute;
+  left: 452px;
+  bottom: 50px;
+  width: 540px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 36px;
-  margin-top: 40px;
+  gap: 18px;
 }
 
-.concerns-copy-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 36px;
-}
-
-.problem-note,
-.concerns-bottom-copy {
+.worries-block__caption p {
   margin: 0;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 14px;
   line-height: 1.8;
-  letter-spacing: 0.06em;
-  text-align: center;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
   white-space: nowrap;
 }
 
-.concerns-slash {
+.worries-block__caption-line {
   display: block;
-  width: 1.5px;
-  height: 44px;
+  width: 36px;
+  height: 1.5px;
   background: #111;
-  flex: 0 0 auto;
 }
 
-.concerns-slash--left { transform: rotate(-18deg); }
-.concerns-slash--right { transform: rotate(18deg); }
+.worries-block__caption-line--left {
+  transform: rotate(65deg);
+}
 
-.problem-cta {
+.worries-block__caption-line--right {
+  transform: rotate(-65deg);
+}
+
+/* -------------------------
+   CTA
+------------------------- */
+.worries-block__cta {
+  position: absolute;
+  right: 255px;
+  bottom: 40px;
+}
+
+.worries-block__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 220px;
-  height: 58px;
-  border-radius: 12px;
+  width: 160px;
+  height: 56px;
   background: #111;
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-align: center;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
 }
 
-.problem-cta:hover {
-  opacity: 0.86;
-  transform: translateY(-1px);
-}
-
-@media (min-width: 1280px) {
-  .concerns-layout {
-    grid-template-columns: 430px 284px 430px;
-    column-gap: 44px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .problem-inner,
-  .concerns-inner {
-    padding-left: 16px;
-    padding-right: 16px;
+/* -------------------------
+   簡易レスポンシブ
+   PC見本を基準に、狭い画面では全体を縮小して崩れを防ぐ
+------------------------- */
+@media (max-width: 1439px) {
+  .worries-block__inner {
+    width: 100vw;
+    height: calc(100vw * 560 / 1440);
+    min-height: 420px;
+    transform-origin: top center;
   }
 
-  .concerns-layout {
-    grid-template-columns: 400px 280px 400px;
-    column-gap: 32px;
-  }
-
-  .problem-center,
-  .concerns-center {
-    width: 280px;
-    margin-top: 120px;
-  }
-
-  .problem-title,
-  .concerns-title {
-    font-size: 52px;
-  }
-
-  .problem-card,
-  .concern-card {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 1127px) and (min-width: 1024px) {
-  .problem-inner,
-  .concerns-inner {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .concerns-layout {
-    grid-template-columns: 320px 300px 320px;
-    column-gap: 16px;
-  }
-
-  .problem-center,
-  .concerns-center {
-    width: 300px;
-    margin-top: 120px;
-  }
-
-  .problem-card,
-  .concern-card,
-  .problem-card--03,
-  .problem-card--04 {
-    width: 320px;
-  }
-
-  .problem-card--01 { transform: translateX(0); }
-  .problem-card--02 { transform: translateX(-8px); }
-  .problem-card--03 { transform: translateX(0); }
-  .problem-card--04 { transform: translateX(0); }
-  .problem-card--05 { transform: translateX(8px); }
-  .problem-card--06 { transform: translateX(0); }
-
-  .problem-bottom,
-  .concerns-bottom {
-    flex-wrap: wrap;
-    row-gap: 22px;
-  }
-}
-
-@media (max-width: 1023px) {
-  #worries.problem-section,
-  .concerns-section {
-    padding: 72px 0;
-  }
-
-  .problem-inner,
-  .concerns-inner {
-    width: 100%;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .concerns-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
-  }
-
-  .problem-center,
-  .concerns-center {
-    order: 1;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 2px;
-  }
-
-  .concerns-card-column--left {
-    order: 2;
-  }
-
-  .concerns-card-column--right {
-    order: 3;
-  }
-
-  .problem-title,
-  .concerns-title {
-    font-size: 44px;
-    line-height: 1.22;
-  }
-
-  .problem-icon,
-  .concerns-icon {
-    margin-top: 28px;
-  }
-
-  .concerns-card-column {
-    width: 100%;
-    gap: 18px;
-    justify-items: center;
-  }
-
-  .problem-card,
-  .concern-card,
-  .problem-card--01,
-  .problem-card--02,
-  .problem-card--03,
-  .problem-card--04,
-  .problem-card--05,
-  .problem-card--06 {
-    width: 100%;
-    max-width: 560px;
-    min-height: auto;
-    transform: none;
-  }
-
-  .problem-bottom,
-  .concerns-bottom {
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 42px;
-  }
-
-  .problem-note,
-  .concerns-bottom-copy {
-    white-space: normal;
+  .worries-block__inner > * {
+    transform-origin: center;
   }
 }
 
 @media (max-width: 767px) {
-  #worries.problem-section,
-  .concerns-section {
-    padding-top: 64px;
-    padding-bottom: 64px;
+  .worries-block__inner {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 64px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .problem-inner,
-  .concerns-inner {
-    padding-left: 20px;
-    padding-right: 20px;
+  .worries-card,
+  .worries-block__heading-wrap,
+  .worries-block__icon,
+  .worries-block__caption,
+  .worries-block__cta {
+    position: static;
+    transform: none;
+    width: 100%;
   }
 
-  .problem-title,
-  .concerns-title {
+  .worries-block__heading-wrap {
+    order: 1;
+  }
+
+  .worries-block__heading {
     font-size: 34px;
-    line-height: 1.22;
-    letter-spacing: -0.06em;
+    line-height: 1.45;
   }
 
-  .problem-card,
-  .concern-card {
-    max-width: none;
-    padding: 18px 20px;
-    box-shadow: 5px 6px 0 #111;
-    font-size: 16px;
-    line-height: 1.7;
+  .worries-block__icon {
+    order: 2;
+    display: flex;
+    justify-content: center;
   }
 
-  .concerns-copy-wrap {
-    gap: 0;
+  .worries-card {
+    min-height: auto;
+    box-shadow: 6px 6px 0 #111;
   }
 
-  .concerns-slash {
-    display: none;
+  .worries-block__caption {
+    flex-direction: row;
+    white-space: normal;
   }
 
-  .concerns-bottom-copy {
-    font-size: 17px;
-    line-height: 1.8;
-    letter-spacing: 0.06em;
+  .worries-block__caption p {
+    white-space: normal;
+    text-align: center;
   }
 
-  .problem-cta {
-    width: 220px;
-    height: 58px;
-    font-size: 16px;
+  .worries-block__cta {
+    text-align: center;
   }
 }
-
 
 /* =========================================
    できることブロック
