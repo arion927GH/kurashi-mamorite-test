@@ -466,23 +466,19 @@ h3 {
 
 .worries-block__inner {
   position: relative;
-  width: 1440px;
+  width: min(100%, 1440px);
   height: 560px;
   margin: 0 auto;
   background: #e6be91;
   overflow: hidden;
 }
 
-/* -------------------------
-   共通カード
-------------------------- */
 .worries-card {
   position: absolute;
-  background: #f7f7f7;
+  background: #ffffff;
   border-radius: 14px;
   box-shadow: 8px 8px 0 #111;
   padding: 17px 24px;
-  box-sizing: border-box;
 }
 
 .worries-card p {
@@ -491,7 +487,6 @@ h3 {
   line-height: 1.75;
   letter-spacing: 0.04em;
   color: #1a1a1a;
-  font-weight: 400;
 }
 
 .worries-card p span {
@@ -499,57 +494,13 @@ h3 {
   font-weight: 700;
 }
 
-/* -------------------------
-   左カード
-------------------------- */
-.worries-card--l1 {
-  left: 104px;
-  top: 64px;
-  width: 350px;
-  min-height: 98px;
-}
+.worries-card--l1 { left: 104px; top: 64px; width: 350px; min-height: 98px; }
+.worries-card--l2 { left: 96px; top: 203px; width: 328px; min-height: 98px; }
+.worries-card--l3 { left: 80px; top: 334px; width: 378px; min-height: 100px; }
+.worries-card--r1 { right: 104px; top: 48px; width: 368px; min-height: 98px; }
+.worries-card--r2 { right: 112px; top: 179px; width: 328px; min-height: 98px; }
+.worries-card--r3 { right: 102px; top: 318px; width: 332px; min-height: 100px; }
 
-.worries-card--l2 {
-  left: 96px;
-  top: 203px;
-  width: 328px;
-  min-height: 98px;
-}
-
-.worries-card--l3 {
-  left: 80px;
-  top: 334px;
-  width: 378px;
-  min-height: 100px;
-}
-
-/* -------------------------
-   右カード
-------------------------- */
-.worries-card--r1 {
-  right: 104px;
-  top: 48px;
-  width: 368px;
-  min-height: 98px;
-}
-
-.worries-card--r2 {
-  right: 112px;
-  top: 179px;
-  width: 328px;
-  min-height: 98px;
-}
-
-.worries-card--r3 {
-  right: 102px;
-  top: 318px;
-  width: 332px;
-  min-height: 100px;
-}
-
-/* -------------------------
-   中央見出し
-------------------------- */
 .worries-block__heading-wrap {
   position: absolute;
   left: 50%;
@@ -569,9 +520,6 @@ h3 {
   font-weight: 400;
 }
 
-/* -------------------------
-   中央アイコン
-------------------------- */
 .worries-block__icon {
   position: absolute;
   left: 50%;
@@ -582,15 +530,11 @@ h3 {
 }
 
 .worries-block__icon img {
-  display: block;
   width: 80px;
   height: 80px;
   object-fit: contain;
 }
 
-/* -------------------------
-   下キャプション
-------------------------- */
 .worries-block__caption {
   position: absolute;
   left: 452px;
@@ -618,17 +562,9 @@ h3 {
   background: #111;
 }
 
-.worries-block__caption-line--left {
-  transform: rotate(65deg);
-}
+.worries-block__caption-line--left { transform: rotate(65deg); }
+.worries-block__caption-line--right { transform: rotate(-65deg); }
 
-.worries-block__caption-line--right {
-  transform: rotate(-65deg);
-}
-
-/* -------------------------
-   CTA
-------------------------- */
 .worries-block__cta {
   position: absolute;
   right: 255px;
@@ -643,86 +579,10 @@ h3 {
   height: 56px;
   background: #111;
   color: #fff;
-  text-decoration: none;
   border-radius: 14px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  box-sizing: border-box;
-}
-
-/* -------------------------
-   簡易レスポンシブ
-   PC見本を基準に、狭い画面では全体を縮小して崩れを防ぐ
-------------------------- */
-@media (max-width: 1439px) {
-  .worries-block__inner {
-    width: 100vw;
-    height: calc(100vw * 560 / 1440);
-    min-height: 420px;
-    transform-origin: top center;
-  }
-
-  .worries-block__inner > * {
-    transform-origin: center;
-  }
-}
-
-@media (max-width: 767px) {
-  .worries-block__inner {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    padding: 64px 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .worries-card,
-  .worries-block__heading-wrap,
-  .worries-block__icon,
-  .worries-block__caption,
-  .worries-block__cta {
-    position: static;
-    transform: none;
-    width: 100%;
-  }
-
-  .worries-block__heading-wrap {
-    order: 1;
-  }
-
-  .worries-block__heading {
-    font-size: 34px;
-    line-height: 1.45;
-  }
-
-  .worries-block__icon {
-    order: 2;
-    display: flex;
-    justify-content: center;
-  }
-
-  .worries-card {
-    min-height: auto;
-    box-shadow: 6px 6px 0 #111;
-  }
-
-  .worries-block__caption {
-    flex-direction: row;
-    white-space: normal;
-  }
-
-  .worries-block__caption p {
-    white-space: normal;
-    text-align: center;
-  }
-
-  .worries-block__cta {
-    text-align: center;
-  }
 }
 
 /* =========================================
