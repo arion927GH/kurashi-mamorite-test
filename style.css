@@ -455,148 +455,174 @@ h3 {
 }
 
 /* =========================================================
-   Worries block
+   Onayami block
 ========================================================= */
 
-.worries {
-  background: #e6be91;
+.onayami-section {
   width: 100%;
   height: 560px;
+  background: #E8C193;
   overflow: hidden;
-  position: relative;
 }
 
-.worries-stage {
-  width: min(100%, 1440px);
+.onayami-stage {
+  position: relative;
+  width: 1440px;
   height: 560px;
   margin: 0 auto;
-  position: relative;
-  padding-inline: clamp(32px, 5vw, 80px);
-  box-sizing: border-box;
 }
 
-.worry-card {
-  position: absolute;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 10px 10px 0 #111;
-  padding: 24px 28px;
-  box-sizing: border-box;
-  font-size: 17px;
-  line-height: 1.75;
-  letter-spacing: 0.02em;
-  color: #111;
-  font-weight: 500;
-  z-index: 2;
-}
-
-.worry-card p {
-  margin: 0;
-}
-
-.worry-card .lead {
-  color: #e6be91;
-  font-weight: 700;
-}
-
-.worry-card--left-1 { left: clamp(24px, 6vw, 96px); top: 52px; width: clamp(300px, 29vw, 420px); }
-.worry-card--left-2 { left: clamp(12px, 5vw, 76px); top: 190px; width: clamp(290px, 27vw, 390px); }
-.worry-card--left-3 { left: clamp(0px, 4vw, 56px); top: 332px; width: clamp(310px, 30vw, 410px); }
-.worry-card--right-1 { right: clamp(24px, 6vw, 96px); top: 30px; width: clamp(300px, 29vw, 420px); }
-.worry-card--right-2 { right: clamp(18px, 5vw, 76px); top: 176px; width: clamp(290px, 27vw, 390px); }
-.worry-card--right-3 { right: clamp(10px, 4vw, 56px); top: 316px; width: clamp(310px, 30vw, 410px); }
-
-.worries-title {
+.onayami-title {
   position: absolute;
   left: 50%;
-  top: 140px;
+  top: 114px;
   transform: translateX(-50%);
-  width: clamp(260px, 22vw, 380px);
-  text-align: center;
+  width: 420px;
   margin: 0;
+  text-align: center;
   color: #fff;
   font-family: "Zen Antique", serif;
-  font-size: clamp(42px, 4vw, 50px);
-  line-height: 1.35;
-  letter-spacing: -0.06em;
+  font-size: 48px;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
   font-weight: 400;
-  z-index: 3;
+  white-space: nowrap;
 }
 
-.worries-icon {
+.onayami-title span { display: block; }
+
+.onayami-icon {
   position: absolute;
   left: 50%;
-  top: 322px;
+  top: 315px;
   transform: translateX(-50%);
-  width: 76px;
-  height: 76px;
-  z-index: 3;
-}
-
-.worries-icon img {
-  width: 76px;
-  height: 76px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
-.worries-caption-row {
+.onayami-card {
   position: absolute;
-  left: 50%;
-  bottom: 46px;
-  transform: translateX(-50%);
-  width: clamp(520px, 48vw, 720px);
-  max-width: calc(100% - 280px);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 9px 8px 0 #111;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  box-sizing: border-box;
+  padding: 20px 26px;
+  color: #111;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 2.05;
+  letter-spacing: 0.08em;
+  font-weight: 400;
   z-index: 2;
 }
 
-.worries-caption {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.6;
-  letter-spacing: 0.04em;
-  color: #111;
-  text-align: center;
-  white-space: nowrap;
-  flex: 0 1 auto;
-  min-width: 0;
-}
+.onayami-card p { margin: 0; }
 
-.caption-line {
-  flex: 0 0 auto;
-  display: block;
-  width: 18px;
-  height: 38px;
-  border-left: 1px solid #111;
-}
-
-.caption-line-left {
-  transform: rotate(-24deg);
-}
-
-.caption-line-right {
-  transform: rotate(24deg);
-}
-
-.worries-button {
-  position: absolute;
-  right: clamp(80px, 10vw, 160px);
-  bottom: 30px;
-  width: 190px;
-  height: 68px;
-  border-radius: 16px;
-  background: #111;
-  color: #fff;
-  font-size: 17px;
+.onayami-card span {
+  color: #D6A66F;
   font-weight: 700;
+}
+
+.onayami-card-01 { left: 104px; top: 64px; width: 307px; height: 99px; }
+.onayami-card-02 { left: 96px; top: 204px; width: 288px; height: 98px; }
+.onayami-card-03 { left: 80px; top: 334px; width: 330px; height: 98px; }
+.onayami-card-04 { left: 1024px; top: 48px; width: 328px; height: 99px; }
+.onayami-card-05 { left: 1020px; top: 180px; width: 309px; height: 98px; }
+.onayami-card-06 { left: 1048px; top: 318px; width: 290px; height: 99px; }
+
+.onayami-bottom-copy {
+  position: absolute;
+  left: 453px;
+  top: 480px;
+  width: 533px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: #111;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.onayami-bottom-copy p { margin: 0; }
+
+.onayami-slash {
+  display: block;
+  width: 1px;
+  height: 38px;
+  background: #111;
+  transform-origin: center;
+}
+
+.onayami-slash-left { transform: rotate(-27deg); }
+.onayami-slash-right { transform: rotate(27deg); }
+
+.onayami-cta {
+  position: absolute;
+  left: 1024px;
+  top: 465px;
+  width: 161px;
+  height: 55px;
+  border-radius: 14px;
+  background: #000;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   z-index: 3;
+}
+
+@media (max-width: 1439px) and (min-width: 769px) {
+  .onayami-section {
+    height: calc(560px * (100vw / 1440));
+  }
+
+  .onayami-stage {
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 768px) {
+  .onayami-section {
+    height: auto;
+    overflow: visible;
+    padding: 48px 16px;
+  }
+
+  .onayami-stage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .onayami-title,
+  .onayami-icon,
+  .onayami-card,
+  .onayami-bottom-copy,
+  .onayami-cta {
+    position: static;
+    transform: none;
+  }
+
+  .onayami-title { width: auto; white-space: normal; }
+  .onayami-card { width: 100%; height: auto; }
+  .onayami-bottom-copy { width: 100%; }
 }
 
 /* =========================================
