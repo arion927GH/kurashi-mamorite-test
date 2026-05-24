@@ -471,7 +471,8 @@ h3 {
   height: 560px;
   margin: 0 auto;
   position: relative;
-  overflow: visible;
+  padding-inline: clamp(32px, 5vw, 80px);
+  box-sizing: border-box;
 }
 
 .worry-card {
@@ -493,31 +494,31 @@ h3 {
   margin: 0;
 }
 
-.worry-card p span {
+.worry-card .lead {
   color: #e6be91;
   font-weight: 700;
 }
 
-.worry-card--left-1 { left: 96px; top: 64px; width: 360px; height: 100px; }
-.worry-card--left-2 { left: 86px; top: 204px; width: 340px; height: 100px; }
-.worry-card--left-3 { left: 72px; top: 336px; width: 370px; height: 100px; }
-.worry-card--right-1 { right: 96px; top: 48px; width: 360px; height: 100px; }
-.worry-card--right-2 { right: 120px; top: 184px; width: 330px; height: 100px; }
-.worry-card--right-3 { right: 104px; top: 320px; width: 330px; height: 100px; }
+.worry-card--left-1 { left: clamp(24px, 6vw, 96px); top: 52px; width: clamp(300px, 29vw, 420px); }
+.worry-card--left-2 { left: clamp(12px, 5vw, 76px); top: 190px; width: clamp(290px, 27vw, 390px); }
+.worry-card--left-3 { left: clamp(0px, 4vw, 56px); top: 332px; width: clamp(310px, 30vw, 410px); }
+.worry-card--right-1 { right: clamp(24px, 6vw, 96px); top: 30px; width: clamp(300px, 29vw, 420px); }
+.worry-card--right-2 { right: clamp(18px, 5vw, 76px); top: 176px; width: clamp(290px, 27vw, 390px); }
+.worry-card--right-3 { right: clamp(10px, 4vw, 56px); top: 316px; width: clamp(310px, 30vw, 410px); }
 
-.worries-heading {
+.worries-title {
   position: absolute;
   left: 50%;
-  top: 136px;
+  top: 140px;
   transform: translateX(-50%);
-  width: 380px;
+  width: clamp(260px, 22vw, 380px);
   text-align: center;
   margin: 0;
   color: #fff;
   font-family: "Zen Antique", serif;
-  font-size: 50px;
+  font-size: clamp(42px, 4vw, 50px);
   line-height: 1.35;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.06em;
   font-weight: 400;
   z-index: 3;
 }
@@ -525,7 +526,7 @@ h3 {
 .worries-icon {
   position: absolute;
   left: 50%;
-  top: 315px;
+  top: 322px;
   transform: translateX(-50%);
   width: 76px;
   height: 76px;
@@ -538,55 +539,51 @@ h3 {
   object-fit: contain;
 }
 
-.worries-caption {
+.worries-caption-row {
   position: absolute;
   left: 50%;
-  top: 490px;
+  bottom: 46px;
   transform: translateX(-50%);
-  width: 560px;
-  text-align: center;
+  width: clamp(520px, 48vw, 720px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   z-index: 2;
 }
 
-.worries-caption p {
+.worries-caption {
   margin: 0;
   font-size: 15px;
   line-height: 1.6;
   letter-spacing: 0.04em;
   color: #111;
+  text-align: center;
   white-space: nowrap;
 }
 
-.worries-caption-line {
-  position: absolute;
-  width: 1px;
-  height: 40px;
-  background: #111;
+.caption-line {
+  display: block;
+  width: 18px;
+  height: 38px;
+  border-left: 1px solid #111;
 }
 
-.worries-caption-line--left {
-  left: 448px;
-  top: 482px;
+.caption-line-left {
   transform: rotate(-24deg);
 }
 
-.worries-caption-line--right {
-  right: 448px;
-  top: 482px;
+.caption-line-right {
   transform: rotate(24deg);
 }
 
-.worries-cta {
-  position: absolute;
-  right: 150px;
-  top: 462px;
-  z-index: 3;
-}
-
 .worries-button {
-  width: 160px;
-  height: 54px;
-  border-radius: 14px;
+  position: absolute;
+  right: clamp(80px, 10vw, 160px);
+  bottom: 30px;
+  width: 190px;
+  height: 68px;
+  border-radius: 16px;
   background: #111;
   color: #fff;
   font-size: 17px;
@@ -595,6 +592,7 @@ h3 {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  z-index: 3;
 }
 
 /* =========================================
