@@ -665,7 +665,7 @@ h3 {
   position: relative;
   width: 100%;
   height: 2500px;
-  background: #000;
+  background: #ffffff;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -685,7 +685,7 @@ h3 {
   top: 74px;
   width: 360px;
   margin: 0;
-  color: #F5F1EA;
+  color: #111111;
   font-family: "Zen Antique", serif;
   font-size: 64px;
   line-height: 1.18;
@@ -693,7 +693,7 @@ h3 {
   font-weight: 400;
 }
 
-.dekiru-title span { display: block; }
+.dekiru-title span { display: block; white-space: nowrap; }
 
 .dekiru-intro-text {
   position: absolute;
@@ -701,7 +701,7 @@ h3 {
   top: 82px;
   width: 545px;
   margin: 0;
-  color: #F5F1EA;
+  color: #111111;
   font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: 18px;
   line-height: 2;
@@ -723,7 +723,7 @@ h3 {
 
 .dekiru-num,
 .dekiru-corporate-num {
-  color: #F5F1EA;
+  color: #111111;
   font-family: "Nanum Brush Script", cursive;
   font-size: 48px;
   line-height: 1;
@@ -742,6 +742,12 @@ h3 {
 .dekiru-item-title span,
 .dekiru-corporate-title span { display: block; }
 
+.dekiru-item-title-01 { white-space: nowrap; }
+
+.dekiru-item-title-02 span,
+.dekiru-item-title-03 span,
+.dekiru-corporate-title span { white-space: nowrap; }
+
 .dekiru-item-text,
 .dekiru-corporate-text {
   margin: 0;
@@ -754,7 +760,7 @@ h3 {
   position: absolute;
   display: block;
   height: 1px;
-  background: #F5F1EA;
+  background: #111111;
 }
 
 .dekiru-photo {
@@ -766,15 +772,15 @@ h3 {
 .dekiru-item-01 { left: 0; top: 0; width: 1440px; height: 860px; }
 .dekiru-item-01 .dekiru-num { position: absolute; left: 78px; top: 542px; }
 .dekiru-item-01 .dekiru-copy { position: absolute; left: 172px; top: 618px; width: 370px; }
-.dekiru-item-01 .dekiru-item-title { width: 320px; color: #F5F1EA; font-size: 52px; line-height: 1.18; }
-.dekiru-item-01 .dekiru-item-text { margin-top: 34px; width: 350px; color: #F5F1EA; font-size: 18px; line-height: 1.95; }
+.dekiru-item-01 .dekiru-item-title { width: 320px; color: #111111; font-size: 52px; line-height: 1.18; }
+.dekiru-item-01 .dekiru-item-text { margin-top: 34px; width: 350px; color: #111111; font-size: 18px; line-height: 1.95; }
 .dekiru-item-01 .dekiru-photo { position: absolute; left: 744px; top: 412px; width: 592px; }
 
 .dekiru-item-02 { left: 0; top: 0; width: 1440px; height: 1700px; }
 .dekiru-item-02 .dekiru-photo { position: absolute; left: 82px; top: 1012px; width: 586px; }
 .dekiru-item-02 .dekiru-copy { position: absolute; left: 824px; top: 1140px; width: 410px; }
-.dekiru-item-02 .dekiru-item-title { width: 360px; color: #F5F1EA; font-size: 52px; line-height: 1.2; }
-.dekiru-item-02 .dekiru-item-text { margin-top: 34px; width: 395px; color: #F5F1EA; font-size: 18px; line-height: 1.95; }
+.dekiru-item-02 .dekiru-item-title { width: 360px; color: #111111; font-size: 52px; line-height: 1.2; }
+.dekiru-item-02 .dekiru-item-text { margin-top: 34px; width: 395px; color: #111111; font-size: 18px; line-height: 1.95; }
 .dekiru-item-02 .dekiru-num { position: absolute; left: 1298px; top: 1110px; }
 .dekiru-item-02 .dekiru-line-right { left: 1360px; top: 1132px; width: 72px; }
 
@@ -782,8 +788,8 @@ h3 {
 .dekiru-item-03 .dekiru-num { position: absolute; left: 78px; top: 1730px; }
 .dekiru-item-03 .dekiru-line-left { left: 0; top: 1752px; width: 66px; }
 .dekiru-item-03 .dekiru-copy { position: absolute; left: 172px; top: 1792px; width: 390px; }
-.dekiru-item-03 .dekiru-item-title { width: 360px; color: #F5F1EA; font-size: 52px; line-height: 1.2; }
-.dekiru-item-03 .dekiru-item-text { margin-top: 34px; width: 370px; color: #F5F1EA; font-size: 18px; line-height: 1.95; }
+.dekiru-item-03 .dekiru-item-title { width: 360px; color: #111111; font-size: 52px; line-height: 1.2; }
+.dekiru-item-03 .dekiru-item-text { margin-top: 34px; width: 370px; color: #111111; font-size: 18px; line-height: 1.95; }
 .dekiru-item-03 .dekiru-photo { position: absolute; left: 742px; top: 1640px; width: 596px; }
 
 .dekiru-corporate {
@@ -796,12 +802,12 @@ h3 {
   box-sizing: border-box;
 }
 
-.dekiru-corporate-num { position: absolute; left: 28px; top: 44px; color: #111; font-size: 48px; }
-.dekiru-corporate-slash { position: absolute; width: 66px; height: 1px; background: #111; transform-origin: center; }
+.dekiru-corporate-num { position: absolute; left: 28px; top: 44px; color: #111111; font-size: 48px; }
+.dekiru-corporate-slash { position: absolute; width: 66px; height: 1px; background: #111111; transform-origin: center; }
 .dekiru-corporate-slash-1 { left: 66px; top: 46px; transform: rotate(-18deg); }
 .dekiru-corporate-slash-2 { left: 68px; top: 98px; transform: rotate(29deg); }
-.dekiru-corporate-title { position: absolute; left: 136px; top: 34px; width: 280px; color: #111; font-size: 50px; line-height: 1.18; }
-.dekiru-corporate-text { position: absolute; left: 620px; top: 30px; width: 590px; color: #111; font-size: 16px; line-height: 2.05; }
+.dekiru-corporate-title { position: absolute; left: 136px; top: 34px; width: 280px; color: #111111; font-size: 50px; line-height: 1.18; }
+.dekiru-corporate-text { position: absolute; left: 620px; top: 30px; width: 590px; color: #111111; font-size: 16px; line-height: 2.05; }
 
 @media (max-width: 1439px) and (min-width: 769px) {
   .dekiru-section { height: calc(2500px * (100vw / 1440)); }
