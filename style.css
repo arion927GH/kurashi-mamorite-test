@@ -1544,31 +1544,12 @@ body {
   border-color: #d8b47b !important;
 }
 
-/* SP時もヘッダーを低めに保つ */
-@media (max-width: 900px) {
-  .site-header__inner {
-    height: 64px !important;
-    padding: 0 24px;
-  }
-
-  .site-header__logo img {
-    width: 148px !important;
-  }
-
-  .site-header__cta {
-    width: 132px !important;
-    height: 36px !important;
-    border-radius: 12px !important;
-    font-size: 13px !important;
-  }
-}
-
 /* ===== Hero section (PC 1440x860 fixed artboard) ===== */
 .hero-section {
   position: relative;
   width: 100%;
   height: 860px;
-  background: #F7F5F2;
+  background: #fff;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -1623,16 +1604,16 @@ body {
 }
 
 .hero-deco-top {
-  left: 450px;
-  top: 96px;
-  width: 76px;
+  left: 458px;
+  top: 94px;
+  width: 74px;
   transform: rotate(-15deg);
 }
 
 .hero-deco-bottom {
-  left: 450px;
+  left: 458px;
   top: 414px;
-  width: 76px;
+  width: 74px;
   transform: rotate(30deg);
 }
 
@@ -1640,7 +1621,7 @@ body {
   position: absolute;
   left: 0;
   top: 326px;
-  width: 470px;
+  width: 430px;
   margin: 0;
   padding: 0;
   color: #111;
@@ -1655,7 +1636,7 @@ body {
 .hero-section .hero-actions {
   position: absolute;
   left: 0;
-  top: 470px;
+  top: 508px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1695,13 +1676,13 @@ body {
 .hero-area-box {
   position: absolute;
   left: 0;
-  top: 598px;
+  top: 636px;
   width: 388px;
-  height: 130px;
+  height: 160px;
   background: #F1ECE5;
   border-radius: 14px;
   box-sizing: border-box;
-  padding: 22px 24px;
+  padding: 26px 24px;
   display: flex;
   align-items: center;
   gap: 22px;
