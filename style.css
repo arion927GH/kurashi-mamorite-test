@@ -545,6 +545,7 @@ h3 {
   bottom: 46px;
   transform: translateX(-50%);
   width: clamp(520px, 48vw, 720px);
+  max-width: calc(100% - 280px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -560,9 +561,12 @@ h3 {
   color: #111;
   text-align: center;
   white-space: nowrap;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .caption-line {
+  flex: 0 0 auto;
   display: block;
   width: 18px;
   height: 38px;
