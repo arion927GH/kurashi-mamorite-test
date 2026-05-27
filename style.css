@@ -739,6 +739,157 @@ h3 {
 }
 
 
+/* =========================================================
+   Feature Section (暮らしのマモリテの特徴)
+========================================================= */
+.feature-section {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background: #1a1a1a;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.feature-stage {
+  position: relative;
+  width: 1440px;
+  height: 560px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.feature-heading {
+  position: absolute;
+  left: 0;
+  top: 54px;
+  width: 1440px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+}
+
+.feature-title {
+  margin: 0;
+  padding: 0;
+  color: #e6be91;
+  font-family: "Zen Antique", serif;
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.feature-card {
+  position: absolute;
+  width: 392px;
+  height: 273px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 8px 8px 0 #e6be91;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.feature-card-01 { left: 80px; top: 247px; }
+.feature-card-02 { left: 520px; top: 247px; }
+.feature-card-03 { left: 960px; top: 247px; }
+
+.feature-num-wrap {
+  position: absolute;
+  left: 0;
+  top: -58px;
+  width: 392px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: #e6be91;
+}
+
+.feature-num {
+  display: inline-block;
+  color: #e6be91;
+  font-family: "Caveat", cursive;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.feature-slash {
+  display: block;
+  width: 1px;
+  height: 34px;
+  background: #e6be91;
+  transform-origin: center;
+  flex-shrink: 0;
+}
+
+.feature-slash-left { transform: rotate(-25deg); }
+.feature-slash-right { transform: rotate(25deg); }
+
+.feature-card-title {
+  position: absolute;
+  left: 38px;
+  top: 34px;
+  width: 316px;
+  margin: 0;
+  padding: 0;
+  color: #e6be91;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 32px;
+  line-height: 1.42;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.feature-card-title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.feature-card-text {
+  position: absolute;
+  left: 26px;
+  top: 158px;
+  width: 340px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-align: left;
+}
+
+@media (max-width: 1439px) and (min-width: 769px) {
+  .feature-section {
+    height: calc(560px * (100vw / 1440));
+  }
+
+  .feature-stage {
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+}
+
+
 .script-no,
 .script-q {
   margin: 0 0 10px;
