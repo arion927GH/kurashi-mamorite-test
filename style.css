@@ -2201,3 +2201,208 @@ body {
   .faq-section { height: calc(800px * (100vw / 1440)); }
   .faq-stage { transform: scale(calc(100vw / 1440)); transform-origin: top center; }
 }
+
+/* =========================================================
+   Contact section (ご相談ください) - PC faithful reconstruction
+========================================================= */
+.contact-section {
+  position: relative;
+  width: 100%;
+  height: 663px;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.contact-stage {
+  position: relative;
+  width: 1280px;
+  height: 663px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contact-title {
+  position: absolute;
+  left: 395px;
+  top: 62px;
+  width: 510px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Zen Antique", serif;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.contact-icon {
+  position: absolute;
+  left: 882px;
+  top: 55px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.contact-lead {
+  position: absolute;
+  left: 305px;
+  top: 184px;
+  width: 670px;
+  height: 64px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 28px;
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.contact-lead p {
+  width: 560px;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-slash {
+  display: block;
+  width: 1px;
+  height: 52px;
+  background: #000000;
+  transform-origin: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-slash-left {
+  transform: rotate(-22deg);
+}
+
+.contact-slash-right {
+  transform: rotate(22deg);
+}
+
+.contact-info {
+  position: absolute;
+  left: 240px;
+  top: 308px;
+  width: 800px;
+  height: 190px;
+  box-sizing: border-box;
+}
+
+.contact-info-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  column-gap: 0;
+  width: 800px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000000;
+}
+
+.contact-info-row-mail {
+  height: 48px;
+}
+
+.contact-info-row-area {
+  height: 74px;
+}
+
+.contact-info-row-reply {
+  height: 68px;
+  border-bottom: none;
+}
+
+.contact-info-label {
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0;
+}
+
+.contact-info-body {
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  display: block;
+  padding-top: 0;
+}
+
+.contact-mail {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.contact-actions {
+  position: absolute;
+  left: 471px;
+  top: 565px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-btn {
+  width: 160px;
+  height: 58px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.contact-btn-primary {
+  background: #e6be91;
+  border: 2px solid #e6be91;
+  color: #ffffff;
+}
+
+.contact-btn-secondary {
+  background: #ffffff;
+  border: 2px solid #e6be91;
+  color: #e6be91;
+}
+
+@media (max-width: 1439px) and (min-width: 769px) {
+  .contact-section {
+    height: calc(663px * (100vw / 1440));
+  }
+
+  .contact-stage {
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+}
