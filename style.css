@@ -491,10 +491,12 @@ h3 {
 ========================================================= */
 
 .onayami-section {
+  position: relative;
   width: 100%;
   height: 560px;
-  background: #E8C193;
+  background: #e6be91;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .onayami-stage {
@@ -502,26 +504,31 @@ h3 {
   width: 1440px;
   height: 560px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .onayami-title {
   position: absolute;
   left: 50%;
-  top: 114px;
+  top: 116px;
   transform: translateX(-50%);
-  width: 420px;
+  width: 430px;
   margin: 0;
-  text-align: center;
-  color: #fff;
+  padding: 0;
+  color: #ffffff;
   font-family: "Zen Antique", serif;
   font-size: 48px;
   line-height: 1.45;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
   font-weight: 400;
-  white-space: nowrap;
+  text-align: center;
+  z-index: 2;
 }
 
-.onayami-title span { display: block; }
+.onayami-title span {
+  display: block;
+  white-space: nowrap;
+}
 
 .onayami-icon {
   position: absolute;
@@ -531,30 +538,35 @@ h3 {
   width: 80px;
   height: 80px;
   object-fit: contain;
+  display: block;
+  z-index: 2;
 }
 
 .onayami-card {
   position: absolute;
-  background: #fff;
+  background: #ffffff;
   border-radius: 14px;
-  box-shadow: 9px 8px 0 #111;
+  box-shadow: 9px 8px 0 #000000;
+  box-sizing: border-box;
+  padding: 18px 24px;
   display: flex;
   align-items: center;
-  box-sizing: border-box;
-  padding: 20px 26px;
-  color: #111;
+  color: #000000;
   font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: 16px;
-  line-height: 2.05;
-  letter-spacing: 0.08em;
+  line-height: 2;
+  letter-spacing: 0.02em;
   font-weight: 400;
-  z-index: 2;
+  z-index: 3;
 }
 
-.onayami-card p { margin: 0; }
+.onayami-card p {
+  margin: 0;
+  padding: 0;
+}
 
-.onayami-card span {
-  color: #D6A66F;
+.onayami-card p span {
+  color: #e6be91;
   font-weight: 700;
 }
 
@@ -567,30 +579,36 @@ h3 {
 
 .onayami-bottom-copy {
   position: absolute;
-  left: 453px;
+  left: 452px;
   top: 480px;
-  width: 533px;
+  width: 536px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
-  color: #111;
+  color: #000000;
   font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: 15px;
   line-height: 1;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  font-weight: 400;
   white-space: nowrap;
+  z-index: 2;
 }
 
-.onayami-bottom-copy p { margin: 0; }
+.onayami-bottom-copy p {
+  margin: 0;
+  padding: 0;
+}
 
 .onayami-slash {
   display: block;
   width: 1px;
   height: 38px;
-  background: #111;
+  background: #000000;
   transform-origin: center;
+  flex-shrink: 0;
 }
 
 .onayami-slash-left { transform: rotate(-27deg); }
@@ -603,16 +621,19 @@ h3 {
   width: 161px;
   height: 55px;
   border-radius: 14px;
-  background: #000;
-  color: #fff;
-  display: flex;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   text-decoration: none;
   font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
   z-index: 3;
 }
 
@@ -630,31 +651,7 @@ h3 {
 @media (max-width: 768px) {
   .onayami-section {
     height: auto;
-    overflow: visible;
-    padding: 48px 16px;
   }
-
-  .onayami-stage {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .onayami-title,
-  .onayami-icon,
-  .onayami-card,
-  .onayami-bottom-copy,
-  .onayami-cta {
-    position: static;
-    transform: none;
-  }
-
-  .onayami-title { width: auto; white-space: normal; }
-  .onayami-card { width: 100%; height: auto; }
-  .onayami-bottom-copy { width: 100%; }
 }
 
 /* =========================================
