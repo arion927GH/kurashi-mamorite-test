@@ -2406,3 +2406,113 @@ body {
     transform-origin: top center;
   }
 }
+
+/* Service page hero */
+.service-page-hero-section {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.service-page-hero-stage {
+  position: relative;
+  width: 1440px;
+  height: 540px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.service-page-hero-staff {
+  position: absolute;
+  left: 300px;
+  top: 58px;
+  width: 110px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.service-page-hero-deco {
+  position: absolute;
+  display: block;
+  height: 1px;
+  background: #000000;
+  transform-origin: center;
+}
+
+.service-page-hero-deco-top {
+  left: 472px;
+  top: 87px;
+  width: 76px;
+  transform: rotate(-18deg);
+}
+
+.service-page-hero-copy {
+  position: absolute;
+  left: 610px;
+  top: 54px;
+  width: 540px;
+}
+
+.service-page-hero-title {
+  margin: 0;
+  padding: 0;
+  width: 540px;
+  color: #000000;
+  font-family: "Zen Antique", serif;
+  font-size: 64px;
+  line-height: 1.18;
+  letter-spacing: -0.06em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.service-page-hero-title > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.service-page-hero-title em {
+  color: #e6be91;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.service-page-hero-title b {
+  color: #000000;
+  font-weight: 400;
+}
+
+.service-page-hero-text {
+  width: 515px;
+  margin: 40px 0 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  line-height: 2.08;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.service-page-hero-deco-bottom {
+  left: 474px;
+  top: 416px;
+  width: 66px;
+  transform: rotate(30deg);
+}
+
+@media (max-width: 1439px) and (min-width: 769px) {
+  .service-page-hero-section {
+    height: calc(540px * (100vw / 1440));
+  }
+
+  .service-page-hero-stage {
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+}
