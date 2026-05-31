@@ -2534,34 +2534,34 @@ body {
 }
 
 .service-daily-top {
+  --service-daily-top-height: 582px;
   position: relative;
   width: 1440px;
-  height: 600px;
+  height: var(--service-daily-top-height);
   background: #f3efe9;
+  overflow: visible;
 }
 
 .service-daily-staff-wrap {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 600px;
-  height: 600px;
+  bottom: 0;
+  height: var(--service-daily-top-height);
   overflow: hidden;
 }
 
 .service-daily-staff {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: auto;
-  height: 600px;
   display: block;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
 }
 
 .service-daily-copy {
   position: absolute;
-  left: 720px;
-  top: 72px;
+  left: 694px;
+  top: 108px;
   width: 510px;
 }
 
@@ -2570,7 +2570,7 @@ body {
   color: #000000;
   font-family: "Zen Antique", serif;
   font-size: 60px;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: -0.04em;
   font-weight: 400;
   text-align: left;
@@ -2578,12 +2578,13 @@ body {
 }
 
 .service-daily-text {
+  width: 500px;
   margin: 44px 0 0;
   color: #000000;
   font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 33.6px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   font-weight: 400;
   text-align: left;
 }
@@ -2591,15 +2592,15 @@ body {
 .service-daily-bottom {
   position: relative;
   width: 1440px;
-  height: 525px;
+  height: 543px;
   background: #ffffff;
 }
 
 .service-daily-list-area {
   position: absolute;
-  left: 79px;
-  top: 73px;
-  width: 590px;
+  left: 78px;
+  top: 70px;
+  width: 560px;
 }
 
 .service-daily-subtitle {
@@ -2607,15 +2608,14 @@ body {
   color: #e6be91;
   font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-size: 35px;
-  line-height: 1.45;
+  line-height: 1.35;
   letter-spacing: 0.01em;
   font-weight: 700;
-  text-align: left;
   white-space: nowrap;
 }
 
 .service-daily-list {
-  margin: 31px 0 0;
+  margin: 32px 0 0;
   padding: 0;
   list-style: none;
   color: #000000;
@@ -2624,12 +2624,12 @@ body {
   line-height: 37.8px;
   letter-spacing: 0.02em;
   font-weight: 400;
-  text-align: left;
 }
 
 .service-daily-list li {
   position: relative;
-  padding-left: 1em;
+  margin: 0;
+  padding-left: 1.2em;
 }
 
 .service-daily-list li::before {
@@ -2641,7 +2641,6 @@ body {
 
 .service-daily-deco {
   position: absolute;
-  z-index: 2;
   display: block;
   height: 1px;
   background: #000000;
@@ -2649,79 +2648,80 @@ body {
 }
 
 .service-daily-deco-top {
-  left: 624px;
-  top: 95px;
-  width: 75px;
+  left: 603px;
+  top: 100px;
+  width: 74px;
   transform: rotate(-18deg);
 }
 
 .service-daily-deco-bottom {
   left: 630px;
   top: 313px;
-  width: 68px;
-  transform: rotate(33deg);
-}
-
-.service-daily-gallery {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+  width: 58px;
+  transform: rotate(34deg);
 }
 
 .service-daily-shot {
   position: absolute;
-  z-index: 1;
   margin: 0;
+  isolation: isolate;
 }
 
 .service-daily-shot::before {
   content: "";
   position: absolute;
-  z-index: -1;
   inset: 0;
   border-radius: inherit;
   background: #e6be91;
   transform: translate(8px, 8px);
+  z-index: -1;
 }
 
 .service-daily-shot img {
+  display: block;
   width: 100%;
   height: 100%;
-  border-radius: inherit;
   object-fit: cover;
-  display: block;
+  border-radius: inherit;
 }
 
-.service-daily-shot-01 {
-  left: 796px;
-  top: 470px;
-  width: 180px;
-  height: 194px;
-  border-radius: 48% 52% 48% 52% / 50% 47% 53% 50%;
+.service-daily-shot-top-left {
+  left: 770px;
+  top: 452px;
+  width: 178px;
+  height: 188px;
+  border-radius: 48% 52% 50% 46% / 52% 48% 54% 46%;
 }
 
-.service-daily-shot-02 {
-  left: 1041px;
-  top: 378px;
-  width: 278px;
-  height: 266px;
-  border-radius: 50% 50% 48% 52% / 50% 48% 52% 50%;
+.service-daily-shot-top-right {
+  left: 1010px;
+  top: 365px;
+  width: 272px;
+  height: 272px;
+  border-radius: 52% 48% 46% 54% / 49% 53% 47% 51%;
 }
 
-.service-daily-shot-03 {
-  left: 840px;
-  top: 134px;
-  width: 238px;
-  height: 242px;
-  border-radius: 49% 51% 50% 50% / 48% 50% 50% 52%;
+.service-daily-shot-bottom-left {
+  left: 810px;
+  top: 146px;
+  width: 240px;
+  height: 240px;
+  border-radius: 46% 54% 52% 48% / 53% 47% 51% 49%;
 }
 
-.service-daily-shot-04 {
-  left: 1155px;
-  top: 98px;
-  width: 189px;
-  height: 180px;
-  border-radius: 51% 49% 50% 50% / 49% 51% 49% 51%;
+.service-daily-shot-bottom-right {
+  left: 1111px;
+  top: 118px;
+  width: 175px;
+  height: 175px;
+  border-radius: 51% 49% 48% 52% / 48% 52% 50% 50%;
+}
+
+.service-daily-shot-top-left img,
+.service-daily-shot-top-right img,
+.service-daily-shot-bottom-left img,
+.service-daily-shot-bottom-right img {
+  object-position: center center;
 }
 
 @media (max-width: 1439px) and (min-width: 769px) {
