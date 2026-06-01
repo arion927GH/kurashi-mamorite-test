@@ -2745,3 +2745,236 @@ body {
     height: 580px;
   }
 }
+
+/* Service page food support */
+.service-food-section {
+  --service-food-band-height: 573px;
+
+  position: relative;
+  width: 100%;
+  height: 1155px;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.service-food-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100vw;
+  height: var(--service-food-band-height);
+  transform: translateX(-50%);
+  background: #f3efe9;
+  z-index: 0;
+}
+
+.service-food-stage {
+  position: relative;
+  width: 1440px;
+  height: 1155px;
+  margin: 0 auto;
+  background: transparent;
+  overflow: visible;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.service-food-copy {
+  position: absolute;
+  left: 77px;
+  top: 74px;
+  width: 540px;
+  z-index: 2;
+}
+
+.service-food-title {
+  margin: 0;
+  padding: 0;
+  width: 480px;
+  color: #000000;
+  font-family: "Zen Antique", serif;
+  font-size: 60px;
+  line-height: 1.22;
+  font-weight: 400;
+  font-kerning: normal;
+  font-feature-settings: "palt" 1;
+  font-variant-east-asian: proportional-width;
+  letter-spacing: -0.02em;
+}
+
+.service-food-title > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.service-food-text {
+  width: 550px;
+  margin: 45px 0 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 33.6px;
+  font-weight: 400;
+  font-feature-settings: normal;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.service-food-staff-wrap {
+  position: absolute;
+  left: 910px;
+  top: 0;
+  width: 470px;
+  height: var(--service-food-band-height);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-food-staff {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: auto;
+  height: var(--service-food-band-height);
+  max-width: none;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+.service-food-collage {
+  position: absolute;
+  left: 77px;
+  top: 413px;
+  display: block;
+  width: 574px;
+  height: auto;
+  max-width: none;
+  z-index: 3;
+}
+
+.service-food-sub {
+  position: absolute;
+  display: block;
+  height: auto;
+  max-width: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.service-food-sub-kitchen {
+  left: 105px;
+  top: 741px;
+  width: 208px;
+}
+
+.service-food-sub-shopping {
+  left: 348px;
+  top: 836px;
+  width: 141px;
+}
+
+.service-food-sub-cooking {
+  left: 496px;
+  top: 744px;
+  width: 156px;
+}
+
+.service-food-list-area {
+  position: absolute;
+  left: 849px;
+  top: 650px;
+  width: 460px;
+  z-index: 2;
+}
+
+.service-food-subtitle {
+  margin: 0;
+  padding: 0;
+  color: #e6be91;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 700;
+  font-kerning: normal;
+  font-feature-settings: "palt" 1;
+  font-variant-east-asian: proportional-width;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.service-food-list {
+  margin: 43px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  line-height: 37.8px;
+  font-weight: 500;
+  font-feature-settings: normal;
+  letter-spacing: 0.02em;
+}
+
+.service-food-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.1em;
+}
+
+.service-food-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.service-food-deco {
+  position: absolute;
+  display: block;
+  height: 1px;
+  background: #000000;
+  transform-origin: center;
+  z-index: 2;
+}
+
+.service-food-deco-upper {
+  left: 740px;
+  top: 642px;
+  width: 73px;
+  transform: rotate(18deg);
+}
+
+.service-food-deco-lower {
+  left: 748px;
+  top: 865px;
+  width: 63px;
+  transform: rotate(-30deg);
+}
+
+@media (max-width: 1439px) and (min-width: 769px) {
+  .service-food-section {
+    --service-food-band-height: calc(573px * (100vw / 1440));
+    height: calc(1155px * (100vw / 1440));
+  }
+
+  .service-food-stage {
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+
+  .service-food-staff-wrap {
+    height: 573px;
+  }
+
+  .service-food-staff {
+    height: 573px;
+  }
+}
