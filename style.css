@@ -3078,6 +3078,33 @@ body {
   position: absolute;
   box-sizing: border-box;
   border-radius: 16px;
+  background: transparent;
+  isolation: isolate;
+}
+
+.service-totonoe-card::before,
+.service-totonoe-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.service-totonoe-card::before {
+  transform: translate(8px, 8px);
+  z-index: 0;
+}
+
+.service-totonoe-card::after {
+  transform: translate(0, 0);
+  z-index: 1;
+}
+
+.service-totonoe-card-title,
+.service-totonoe-card-text {
+  position: relative;
+  z-index: 2;
 }
 
 .service-totonoe-card-light {
@@ -3086,18 +3113,16 @@ body {
   width: 350px;
   height: 323px;
   padding: 33px 22px 22px;
-  background: #ffffff;
+  background: transparent;
   z-index: 4;
 }
 
 .service-totonoe-card-light::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
   background: #e6be91;
-  transform: translate(8px, 8px);
-  z-index: -1;
+}
+
+.service-totonoe-card-light::after {
+  background: #ffffff;
 }
 
 .service-totonoe-card-light .service-totonoe-card-title {
@@ -3174,11 +3199,7 @@ body {
 }
 
 .service-totonoe-arrow {
-  position: absolute;
-  display: block;
-  width: 106px;
-  height: auto;
-  max-width: none;
+  display: none;
 }
 
 .service-totonoe-label {
@@ -3194,7 +3215,30 @@ body {
 }
 
 .service-totonoe-label-after {
+  position: absolute;
   color: #e6be91;
+  white-space: nowrap;
+}
+
+.service-totonoe-label-after::before,
+.service-totonoe-label-after::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  width: 29px;
+  height: 1px;
+  background: #000000;
+  transform-origin: center;
+}
+
+.service-totonoe-label-after::before {
+  left: -37px;
+  transform: rotate(66deg);
+}
+
+.service-totonoe-label-after::after {
+  right: -37px;
+  transform: rotate(-66deg);
 }
 
 .service-totonoe-before-after-closet {
@@ -3204,10 +3248,12 @@ body {
 
 .service-totonoe-before-after-closet .service-totonoe-label-before {
   left: 53px;
+  top: 0;
 }
 
 .service-totonoe-before-after-closet .service-totonoe-label-after {
   left: 280px;
+  top: 0;
 }
 
 .service-totonoe-before-after-closet .service-totonoe-arrow {
@@ -3232,10 +3278,12 @@ body {
 
 .service-totonoe-before-after-cabinet .service-totonoe-label-before {
   left: 54px;
+  top: 0;
 }
 
 .service-totonoe-before-after-cabinet .service-totonoe-label-after {
   left: 281px;
+  top: 0;
 }
 
 .service-totonoe-before-after-cabinet .service-totonoe-arrow {
@@ -3259,18 +3307,16 @@ body {
   width: 350px;
   height: 290px;
   padding: 33px 22px 22px;
-  background: #e6be91;
+  background: transparent;
   z-index: 4;
 }
 
 .service-totonoe-card-consultation::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
   background: #000000;
-  transform: translate(8px, 8px);
-  z-index: -1;
+}
+
+.service-totonoe-card-consultation::after {
+  background: #e6be91;
 }
 
 .service-totonoe-card-consultation .service-totonoe-card-title {
