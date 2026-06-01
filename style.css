@@ -3200,7 +3200,7 @@ body {
 
 .service-totonoe-between-arrow {
   position: absolute;
-  width: 36px;
+  width: 28px;
   height: auto;
   display: block;
   z-index: 3;
@@ -3262,8 +3262,8 @@ body {
 }
 
 .service-totonoe-between-arrow-closet {
-  left: 182px;
-  top: 141px;
+  left: 186px;
+  top: 71px;
 }
 
 .service-totonoe-before-closet {
@@ -3292,8 +3292,8 @@ body {
 }
 
 .service-totonoe-between-arrow-cabinet {
-  left: 182px;
-  top: 141px;
+  left: 186px;
+  top: 71px;
 }
 
 .service-totonoe-before-cabinet {
