@@ -3198,8 +3198,13 @@ body {
   object-fit: contain;
 }
 
-.service-totonoe-arrow {
-  display: none;
+.service-totonoe-between-arrow {
+  position: absolute;
+  width: 36px;
+  height: auto;
+  display: block;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .service-totonoe-label {
@@ -3256,9 +3261,9 @@ body {
   top: 0;
 }
 
-.service-totonoe-before-after-closet .service-totonoe-arrow {
-  left: 249px;
-  top: 0;
+.service-totonoe-between-arrow-closet {
+  left: 182px;
+  top: 141px;
 }
 
 .service-totonoe-before-closet {
@@ -3286,9 +3291,9 @@ body {
   top: 0;
 }
 
-.service-totonoe-before-after-cabinet .service-totonoe-arrow {
-  left: 249px;
-  top: 0;
+.service-totonoe-between-arrow-cabinet {
+  left: 182px;
+  top: 141px;
 }
 
 .service-totonoe-before-cabinet {
