@@ -2801,7 +2801,7 @@ body {
   font-kerning: normal;
   font-feature-settings: "palt" 1;
   font-variant-east-asian: proportional-width;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.07em;
 }
 
 .service-food-title > span {
@@ -2827,9 +2827,9 @@ body {
   position: absolute;
   left: 910px;
   top: 0;
-  width: 470px;
+  width: 530px;
   height: var(--service-food-band-height);
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
 }
 
