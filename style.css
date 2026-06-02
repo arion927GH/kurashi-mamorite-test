@@ -3371,3 +3371,189 @@ body {
     height: 582px;
   }
 }
+
+.service-combination-section {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.service-combination-stage {
+  position: relative;
+  width: 1440px;
+  height: 640px;
+  margin: 0 auto;
+  overflow: visible;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.service-combination-title {
+  position: absolute;
+  left: 79px;
+  top: 0;
+  width: 700px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Zen Antique", serif;
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 400;
+  font-kerning: normal;
+  font-feature-settings: "palt" 1;
+  font-variant-east-asian: proportional-width;
+  letter-spacing: -0.07em;
+  white-space: nowrap;
+}
+
+.service-combination-title span {
+  color: #e6be91;
+}
+
+.service-combination-case {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.service-combination-case-01 {
+  left: 0;
+  top: 146px;
+  width: 650px;
+  height: 320px;
+}
+
+.service-combination-case-01 .service-combination-case-label-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: 46px;
+}
+
+.service-combination-line {
+  position: absolute;
+  display: block;
+  height: 1px;
+  background: #000000;
+}
+
+.service-combination-line-left {
+  left: 0;
+  top: 11px;
+  width: 64px;
+}
+
+.service-combination-case-01 .service-combination-case-label {
+  position: absolute;
+  left: 79px;
+  top: 0;
+}
+
+.service-combination-case-01 .service-combination-case-title {
+  position: absolute;
+  left: 169px;
+  top: 69px;
+  width: 460px;
+}
+
+.service-combination-case-01 .service-combination-case-text {
+  position: absolute;
+  left: 169px;
+  top: 239px;
+  width: 500px;
+}
+
+.service-combination-case-02 {
+  left: 809px;
+  top: 225px;
+  width: 631px;
+  height: 320px;
+}
+
+.service-combination-case-02 .service-combination-case-label-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 631px;
+  height: 46px;
+}
+
+.service-combination-case-02 .service-combination-case-label {
+  position: absolute;
+  left: 466px;
+  top: 0;
+}
+
+.service-combination-line-right {
+  left: 568px;
+  top: 12px;
+  width: 63px;
+}
+
+.service-combination-case-02 .service-combination-case-title {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: 530px;
+}
+
+.service-combination-case-02 .service-combination-case-text {
+  position: absolute;
+  left: 0;
+  top: 242px;
+  width: 520px;
+}
+
+.service-combination-case-label {
+  margin: 0;
+  padding: 0;
+  color: #e6be91;
+  font-family: "Caveat", cursive;
+  font-size: 45px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.service-combination-case-title {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 35px;
+  line-height: 45.5px;
+  font-weight: 700;
+  font-kerning: normal;
+  font-feature-settings: "palt" 1;
+  font-variant-east-asian: proportional-width;
+  letter-spacing: -0.03em;
+}
+
+.service-combination-case-text {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 33.6px;
+  font-weight: 400;
+  font-feature-settings: normal;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 1439px) and (min-width: 769px) {
+  .service-combination-section {
+    height: calc(640px * (100vw / 1440));
+  }
+
+  .service-combination-stage {
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+}
