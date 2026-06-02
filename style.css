@@ -3431,27 +3431,27 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 190px;
-  height: 46px;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .service-combination-line {
-  position: absolute;
+  position: static;
   display: block;
+  flex: 0 0 auto;
   height: 1px;
   background: #000000;
 }
 
 .service-combination-line-left {
-  left: 0;
-  top: 11px;
   width: 64px;
 }
 
 .service-combination-case-01 .service-combination-case-label {
-  position: absolute;
-  left: 79px;
-  top: 0;
+  position: static;
 }
 
 .service-combination-case-01 .service-combination-case-title {
@@ -3477,22 +3477,23 @@ body {
 
 .service-combination-case-02 .service-combination-case-label-wrap {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  width: 631px;
-  height: 46px;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .service-combination-case-02 .service-combination-case-label {
-  position: absolute;
-  left: 466px;
-  top: 0;
+  position: static;
+  order: 1;
 }
 
 .service-combination-line-right {
-  left: 568px;
-  top: 12px;
   width: 63px;
+  order: 2;
 }
 
 .service-combination-case-02 .service-combination-case-title {
@@ -3510,11 +3511,12 @@ body {
 }
 
 .service-combination-case-label {
+  position: static;
   margin: 0;
   padding: 0;
   color: #e6be91;
   font-family: "Caveat", cursive;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 1;
   font-weight: 400;
   letter-spacing: 0;
