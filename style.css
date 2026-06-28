@@ -2407,6 +2407,14 @@ body {
   }
 }
 
+/*
+ * Service page desktop checkpoint.
+ * Preserve the current service-page PC layout as-is. Future pricing page work
+ * should use price-hero-*, price-plan-*, price-guide-*, price-note-*,
+ * price-cancel-*, and price-contact-* classes instead of editing the
+ * service-page-*, service-daily-*, service-food-*, service-totonoe-*,
+ * service-combination-*, service-consultable-*, or service-contact-* rules.
+ */
 /* Service page hero */
 .service-page-hero-section {
   position: relative;
